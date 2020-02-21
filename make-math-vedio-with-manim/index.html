@@ -8,12 +8,12 @@
   
   
   
-  <title>Hexo+Github搭建个人博客 | Matrixor</title>
+  <title>利用manim制作数学动画 | Matrixor</title>
 
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
   
-    <meta name="keywords" content="Github,Hexo," />
+    <meta name="keywords" content="数学可视化,manim," />
   
 
   <script>
@@ -152,7 +152,7 @@
               
                 <li>
                   <a 
-                    href="https://www.douban.com/people/171194642/" 
+                    href="https://www.douban.com/people/matrixor" 
                     target="_blank"
                   >
                     豆瓣
@@ -227,24 +227,24 @@
 
 <div class="post">
   <h1 class="article-title">
-    <span>Hexo+Github搭建个人博客</span>
+    <span>利用manim制作数学动画</span>
   </h1>
   <div class="article-top-meta">
     <span>
       发布 : 
-      2020-02-17
+      2020-02-21
     </span>
     
       <span>
         分类 : 
-          <a href="/categories/Github/">
-            Github
+          <a href="/categories/%E6%95%B0%E5%AD%A6%E5%8F%AF%E8%A7%86%E5%8C%96/">
+            数学可视化
           </a>
       </span>
     
     
       <span>
-        浏览 : <span class="article-timer" data-identity="Hexo-Github搭建个人博客"></span>
+        浏览 : <span class="article-timer" data-identity="make-math-vedio-with-manim"></span>
       </span>
     
   </div>
@@ -254,25 +254,16 @@
   <div class="article-content">
     <div class="markdown-body">
       </p>
-<h2 id="前言-1"><a href="#前言-1" class="headerlink" title="前言"></a>前言</h2><p>很多写字的人都想搭建一个属于自己的博客，本文提供一种最便捷的（而且免费）方法，那就是利用 <a href="https://hexo.io/zh-cn/docs/configuration" target="_blank" rel="noopener">Hexo</a>+Github 搭建个人博客。首先感谢 <a href="https://sunhwee.com/posts/6e8839eb.html#toc-heading-14" target="_blank" rel="noopener">@洪卫</a> 博主的教程，本博客就是按照他的教程搭建的，只不过是更简单一点的。有需要的可以直接点击链接，本文主要是写一下我在搭建过程中遇到的问题。</p>
-<h2 id="如何实现支持数学公式"><a href="#如何实现支持数学公式" class="headerlink" title="如何实现支持数学公式"></a>如何实现支持数学公式</h2><p>我采用的是 Hexo 的插件：</p>
-<ul>
-<li><a href="https://github.com/wzpan/hexo-renderer-pandoc">hexo-renderer-pandoc</a></li>
-<li><a href="https://github.com/stevenjoezhang/hexo-filter-mathjax">hexo-filter-mathjax</a></li>
-</ul>
-<p>不过，使用这个插件之前，需要安装Pandoc(版本要大于2.0.0)，国内下载很慢，所以我委托了国外的朋友帮我下载了，这里是windows上的<a href="链接：https://pan.baidu.com/s/1z5OUvTwLrUalL9Zxz1MsRQ">Pandoc2.9.1.1百度云</a>,提取码：8ws4 .</p>
-<p>安装好之后，就安装上面两个插件就可以了。</p>
-<h2 id="写文章和发布文章"><a href="#写文章和发布文章" class="headerlink" title="写文章和发布文章"></a>写文章和发布文章</h2><p>首先在博客根目录下右键打开<code>git bash</code>，安装一个扩展<code>npm i hexo-deployer-git</code>。</p>
-<p>然后输入<code>hexo new post &quot;article title&quot;</code>，新建一篇文章。</p>
-<p>然后打开<code>D:\Study\MyBlog\source\_posts</code>的目录，可以发现下面多了一个文件夹和一个<code>.md</code>文件，一个用来存放你的图片等数据，另一个就是你的文章文件啦。<br>你可以会直接在<code>vscode</code>里面编写<code>markdown</code>文件，可以实时预览，也可以用用其他编辑<code>md</code>文件的软件的工具编写。<br>编写完markdown文件后，根目录下输入<code>hexo g</code>生成静态网页，然后输入<code>hexo s</code>可以本地预览效果，最后输入<code>hexo d</code>上传到<code>github</code>上。这时打开你的<code>github.io</code>主页就能看到发布的文章啦。</p>
-<h2 id="公式示例"><a href="#公式示例" class="headerlink" title="公式示例"></a>公式示例</h2><p>代码1：<br><code>\hbar\frac{\partial}{\partial t}\psi=-\frac{\hbar^2}{2m}\nabla^2\psi+V\psi</code></p>
-<p>$$<br>i\hbar\frac{\partial}{\partial t}\psi=-\frac{\hbar^2}{2m}\nabla^2\psi+V\psi<br>$$</p>
-<p>代码2：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">\begin&#123;eqnarray\*&#125;</span><br><span class="line">\nabla\cdot\vec&#123;E&#125;&amp;&#x3D;&amp;\frac&#123;\rho&#125;&#123;\epsilon_0&#125;\\\\</span><br><span class="line">\nabla\cdot\vec&#123;B&#125;&amp;&#x3D;&amp;0\\\\</span><br><span class="line">\nabla\times\vec&#123;E&#125;&amp;&#x3D;&amp;-\frac&#123;\partial B&#125;&#123;\partial t&#125;\\\\</span><br><span class="line">\nabla\times\vec&#123;B&#125;&amp;&#x3D;&amp;\mu_0\left(\vec&#123;J&#125;+\epsilon_0\frac&#123;\partial E&#125;&#123;\partial t&#125;\right)\\\\</span><br><span class="line">\end&#123;eqnarray\*&#125;</span><br></pre></td></tr></table></figure>
-
-
-<p>\begin{eqnarray*}<br>\nabla\cdot\vec{E}&amp;=&amp;\frac{\rho}{\epsilon_0}\\<br>\nabla\cdot\vec{B}&amp;=&amp;0\\<br>\nabla\times\vec{E}&amp;=&amp;-\frac{\partial B}{\partial t}\\<br>\nabla\times\vec{B}&amp;=&amp;\mu_0\left(\vec{J}+\epsilon_0\frac{\partial E}{\partial t}\right)\\<br>\end{eqnarray*}</p>
-<p><strong>注：</strong>本博客采用的是<a href="https://github.com/dongyuanxin/theme-bmw">BMW</a>主题。<br>有帮助的链接：<br><a href="https://zhuanlan.zhihu.com/p/33616481" target="_blank" rel="noopener">Hexo搭建的GitHub博客之优化大全</a><br><a href="https://blog.dlzhang.com/posts/89dad1c1/" target="_blank" rel="noopener">Hexo NexT 博客增加知乎豆瓣图标支持</a></p>
+<h2 id="3b1b的动画引擎"><a href="#3b1b的动画引擎" class="headerlink" title="3b1b的动画引擎"></a>3b1b的动画引擎</h2><p>我是在知乎上才知道3b1b的动画制作是<a href="https://github.com/3b1b/manim">manim</a>，而且是G.Sanderson自己编写的，非常佩服。很想学一下这个基于python的可视化引擎，但是这个对python有一定的要求，所以我打算把与之相关的介绍文章存放在此，便于以后学习。</p>
+<p>知乎用户<a href="https://www.zhihu.com/people/lijianhui.net" target="_blank" rel="noopener">@李狗嗨</a>和BiliBili用户<a href="https://space.bilibili.com/3557916/" target="_blank" rel="noopener">@Solara</a>为此花了很多精力，威斯康星大学的物理教授Todd Zimmerman写了一份教程，更可贵的是还有与之相关的教程代码放在了他的Github上：</p>
+<ol>
+<li><a href="https://zhuanlan.zhihu.com/p/70243739" target="_blank" rel="noopener">李狗嗨：3b1b的动画引擎如何配置</a></li>
+<li><a href="https://zhuanlan.zhihu.com/p/108052275" target="_blank" rel="noopener">李狗嗨：3b1b动画制作教程 (1)</a></li>
+<li><a href="https://talkingphysics.wordpress.com/2019/01/08/getting-started-animating-with-manim-and-python-3-7/" target="_blank" rel="noopener">T.Zimmerman: Getting Started Animating with manim and Python 3.7</a></li>
+<li><a href="https://github.com/zimmermant/manim_tutorial/blob/master/manim_tutorial_P37.py">Tutorial</a></li>
+</ol>
+<h2 id="目前国内成功的例子"><a href="#目前国内成功的例子" class="headerlink" title="目前国内成功的例子"></a>目前国内成功的例子</h2><p>成功的例子有很多，但我要推荐<a href="https://space.bilibili.com/3557916/" target="_blank" rel="noopener">@Solara</a>，我是偶然的机会在BiliBili上看到的，Solara做的相当不错，而且也写了不少教程，有兴趣的可以去他的知乎和b站上看。</p>
+<h2 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h2><p>希望自己有时间能慢慢摸索出来，加油！</p>
     </div>
   </div>
   
@@ -283,7 +274,7 @@
         
           本文作者 : Matrixor <br/>
         
-        原文链接 : <a href="">https://github.com/HiMatrixor/HiMatrixor.github.io/Hexo-Github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/</a><br>
+        原文链接 : <a href="">https://github.com/HiMatrixor/HiMatrixor.github.io/make-math-vedio-with-manim/</a><br>
         版权声明 : 本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="noopener">CC BY-NC-SA 4.0</a> 许可协议。转载请注明出处！
         </blockquote>
       </div>
@@ -349,8 +340,8 @@
           <i class="iconfont icon-06tags"></i>标签: 
           
           <span class="span--tag">
-            <a href="/tags/Hexo/">
-              #Hexo
+            <a href="/tags/manim/">
+              #manim
             </a>
           </span>
           
@@ -375,15 +366,9 @@
       <div class="nav-pre">
         <i class="iconfont icon-prev"></i>
         上一篇:
-        <a href="/hello-world/" target="_self">Hello World</a>
-      </div>
-    
-    
-      <div class="nav-next">
-        下一篇:
         <a href="/some-tools-to-use-latex-better/" target="_self">更好地使用LaTex</a>
-        <i class="iconfont icon-next"></i>
       </div>
+    
     
   </nav>
 
