@@ -1,259 +1,169 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html>
+  <head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+  <meta name="description" content="献给我的妻子和孩子。">
+  <meta name="keyword" content="hexo-theme, vuejs">
+  
+    <link rel="shortcut icon" href="/css/images/logo.png">
+  
+  <title>
+    
+      Heros in my heart | Matrixor
+    
+  </title>
+  <link href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <link href="//cdnjs.cloudflare.com/ajax/libs/nprogress/0.2.0/nprogress.min.css" rel="stylesheet">
+  <link href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/tomorrow.min.css" rel="stylesheet">
+  
+<link rel="stylesheet" href="/css/style.css">
 
   
-<head>
-  <meta charset="utf-8">
-  <meta name="author" content="董沅鑫, yuanxin.me@gmail.com" />
-  
-  
-  
-  <title>Heros in my heart | Matrixor</title>
-
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+<link rel="stylesheet" href="/css/plugins/gitment.css">
 
   
-    <meta name="keywords" content="数学家的故事,Heros in my heart," />
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/geopattern/1.2.3/js/geopattern.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/nprogress/0.2.0/nprogress.min.js"></script>
   
-
-  <script>
-    console.log('\n%c Hexo-theme-bmw v4.0 ' + '%c 🎉 https://github.com/dongyuanxin/theme-bmw 🎉\n' + '\n%c View demo online ' + '%c 🔍 https://godbmw.com/ 🔍  \n' , 'color: #fadfa3; background: #030307; padding:3px 0;', '', 'color: #fadfa3; background: #030307; padding:3px 0;', '');
-  </script>
-
-  
-    <meta name="description" content="献给我的妻子和孩子。">
-  
+    
+<script src="/js/qrious.js"></script>
 
   
+  
+    
+<script src="/js/gitment.js"></script>
 
   
-    <link rel="icon" href="/images/favicon.ico">
-    <link rel="apple-touch-icon" href="/images/touch-icon.png">
+  
+  
+    <!-- MathJax support START -->
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <!-- MathJax support END -->
   
 
-  <link href="https://cdn.bootcss.com/fancybox/3.5.2/jquery.fancybox.min.css" rel="stylesheet">
-  
-<link rel="stylesheet" href="/css/base.css">
-<link rel="stylesheet" href="/icon/iconfont.css">
-<link rel="stylesheet" href="/css/github-markdown.css">
-<link rel="stylesheet" href="/css/highlight.css">
-
-
-  
-<script src="/js/util.js"></script>
-<script src="/js/valine.min.js"></script>
-
-
-  
-
-  
-    <link href="https://cdn.bootcss.com/aplayer/1.10.1/APlayer.min.css" rel="stylesheet">
-    <script src="https://cdn.bootcss.com/aplayer/1.10.1/APlayer.min.js" async></script>
-  
-
-  
-    <link href="https://cdn.bootcss.com/social-share.js/1.0.16/css/share.min.css" rel="stylesheet">
-  
-  
-  <script src="//cdn.bootcss.com/jquery/3.3.1/jquery.min.js" async></script>
-  
-  
-    <script src="//cdn.jsdelivr.net/npm/leancloud-storage@3.11.0/dist/av-min.js"></script>
-  
 
 <meta name="generator" content="Hexo 4.2.0"></head>
-
-  <body>
-
-    
-
-    <div id="app">
-
-      <div class="header-wrap">
-  <header>
-    <div class="site-brand">
-      <div class="site-title">
-        <a href="/">MATRIXOR</a>
-      </div>
-    </div>
-    <nav class="site-navigation">
-      <ul class="nav-menu">
-      
-        <li class="nav-item" data-path="/">
-          
-            <a 
-              href="/"
-              target="_self"
-            >
-              主页
-            </a>
-          
-        </li>
-      
-        <li class="nav-item" data-path="/archives/">
-          
-            <a 
-              href="/archives/"
-              target="_self"
-            >
-              归档
-            </a>
-          
-        </li>
-      
-        <li class="nav-item" data-path="/categories/">
-          
-            <a 
-              href="/categories/"
-              target="_self"
-            >
-              分类
-            </a>
-          
-        </li>
-      
-        <li class="nav-item" data-path="/tags/">
-          
-            <a 
-              href="/tags/"
-              target="_self"
-            >
-              标签
-            </a>
-          
-        </li>
-      
-        <li class="nav-item" data-path="/friends/">
-          
-            <a 
-              href="/friends/"
-              target="_self"
-            >
-              友链
-            </a>
-          
-        </li>
-      
-        <li class="nav-item" data-path="/about/">
-          
-            <a 
-              href="/about/"
-              target="_self"
-            >
-              关于
-            </a>
-          
-        </li>
-      
-        <li class="nav-item" data-path="">
-          
-            <a href="javascript:void(0);" v-else>抓到我</a>
-            <ul class="nav-menu--dropdown">
-              
-                <li>
-                  <a 
-                    href="https://www.douban.com/people/matrixor" 
-                    target="_blank"
-                  >
-                    豆瓣
-                  </a>
-                </li>
-              
-                <li>
-                  <a 
-                    href="https://www.zhihu.com/people/Matrixor" 
-                    target="_blank"
-                  >
-                    知乎
-                  </a>
-                </li>
-              
-            </ul>
-          
-        </li>
-      
-      </ul>
-    </nav>
-    <i class="iconfont icon-menu"></i>
-  </header>
+<div class="wechat-share">
+  <img src="/css/images/logo.png" />
 </div>
 
-<script>
-  let links = document.querySelectorAll('.nav-item');
-  for(let link of links){
-    let childrenLink = link.querySelector('ul');
-    link.addEventListener('mouseenter', () => {
-      if(childrenLink) {
-        childrenLink.className = "nav-menu--dropdown active";
-      }
-    })
-    link.addEventListener('mouseleave', () => {
-      if(childrenLink) {
-        childrenLink.className = "nav-menu--dropdown";
-      }
-    })
-  }
-  let rootRealPath = getRealPath(window.location.pathname, true);
-  for(let link of links) {
-    let linkPath = link.getAttribute("data-path");
-    if(linkPath && getRealPath(linkPath, true) === rootRealPath) {
-      link.className = "nav-item hover";
-    }
-  }
-
-  let iconMenu = document.querySelector("i.iconfont.icon-menu"),
-    iconMenuClicked = false;
-  let navDOM = document.querySelector("nav.site-navigation");
-  iconMenu.addEventListener("click", () => {
-    iconMenuClicked 
-      ? navDOM.className = "site-navigation active"
-      : navDOM.className = "site-navigation";
-    iconMenuClicked = !iconMenuClicked;
-  })
-</script>
-
+  <body>
+    <header class="header fixed-header">
+  <div class="header-container">
+    <a class="home-link" href="/">
+      <div class="logo"></div>
+      <span>Matrixor</span>
+    </a>
+    <ul class="right-list">
       
-
-
-
-
-
-
-
-
-<div class="container post-index">
-
-  
-
-<div class="post">
-  <h1 class="article-title">
-    <span>Heros in my heart</span>
-  </h1>
-  <div class="article-top-meta">
-    <span>
-      发布 : 
-      2020-03-02
-    </span>
-    
-      <span>
-        分类 : 
-          <a href="/categories/%E6%95%B0%E5%AD%A6%E5%AE%B6%E7%9A%84%E6%95%85%E4%BA%8B/">
-            数学家的故事
-          </a>
-      </span>
-    
-    
-      <span>
-        浏览 : <span class="article-timer" data-identity="heros-in-my-heart"></span>
-      </span>
-    
+        <li class="list-item">
+          
+            <a href="/" class="item-link">Home</a>
+          
+        </li>
+      
+        <li class="list-item">
+          
+            <a href="/tags/" class="item-link">Tags</a>
+          
+        </li>
+      
+        <li class="list-item">
+          
+            <a href="/archives/" class="item-link">Archives</a>
+          
+        </li>
+      
+        <li class="list-item">
+          
+            <a href="/friends/" class="item-link">Link</a>
+          
+        </li>
+      
+        <li class="list-item">
+          
+            <a href="/about/" class="item-link">About</a>
+          
+        </li>
+      
+    </ul>
+    <div class="menu">
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </div>
+    <div class="menu-mask">
+      <ul class="menu-list">
+        
+          <li class="menu-item">
+            
+              <a href="/" class="menu-link">Home</a>
+            
+          </li>
+        
+          <li class="menu-item">
+            
+              <a href="/tags/" class="menu-link">Tags</a>
+            
+          </li>
+        
+          <li class="menu-item">
+            
+              <a href="/archives/" class="menu-link">Archives</a>
+            
+          </li>
+        
+          <li class="menu-item">
+            
+              <a href="/friends/" class="menu-link">Link</a>
+            
+          </li>
+        
+          <li class="menu-item">
+            
+              <a href="/about/" class="menu-link">About</a>
+            
+          </li>
+        
+      </ul>
+    </div>
   </div>
+</header>
 
-  
-
-  <div class="article-content">
-    <div class="markdown-body">
-      <p>注：本文来自北大 bbs，是 ukim 老师通过邮件的形式编写的数学家们的故事。我在大学的时候无意中在朋友那里得知，在追求数学的道路上， ukim 老师写的这些故事一直激励着我，故收录于本博客，以便回忆。</p>
+    <div id="article-banner">
+  <h2>Heros in my heart</h2>
+  <p class="post-date">2020-03-02</p>
+  <div class="arrow-down">
+    <a href="javascript:;"></a>
+  </div>
+</div>
+<main class="app-body flex-box">
+  <!-- Article START -->
+  <article class="post-article">
+    <section class="markdown-content"><p>多年以前，我有一个很宏伟的计划，打算写一本厚厚的书。这本书有三部，第一部写那些数学牛人们的传奇动人荒诞不经的轶事，第二部充满着历史上最最经典的定理 最最美妙的证明，第三部去真实的纪录北大数学的这群烂人，写他们那脏乱的宿舍和芜杂的生活。这一直是一个理想，直到我动手写这些文字的时候，我知道，这将 永远是一个美好的梦。所以，这里只是那个计划的一小部分，讲述的是那些虔诚的人做过的虔诚的事。</p>
+<a id="more"></a>
+<p>注：本文来自北大 bbs，是 ukim 老师通过邮件的形式编写的数学家们的故事。我在大学的时候无意中在朋友那里得知，在追求数学的道路上， ukim 老师写的这些故事一直激励着我，故收录于本博客，以便回忆。</p>
 <p>&lt;%- toc(page.content) %&gt;</p>
 <p><strong>Heros in my heart</strong></p>
 <p><strong>美丽是我们得数学家英雄们永恒的追求。</strong><br>To Music</p>
@@ -269,7 +179,7 @@
 <p>Euler停了生命，也就停止了计算。——de Condorcet </p>
 </blockquote>
 <p>这是一个生产数学家和物理学家的部落，有着十几位优秀的科学家都拥有这个令人骄傲的姓氏。</p>
-<p>1．<br>John Bernoulli在1696年把最速降线问题在一个叫做《教师学报》的杂志上面提出，公开挑战主要是针对他的哥哥Jacobi (Bernoulli，这 两个人在学术让一直相互不忿，据说当年John求悬链线的方程，熬了一夜就搞定了，Jacobi做了一年还认为悬链线应该是抛物线，实在是很没面子。那个 杂志好像是Leibniz搞得，很牛，欧洲的牛人们都来做这个东西。到最后，Jhon收的了5份答案，有他自己的，Leibniz的，还有一个 L (Hospital侯爵的 (我们比较喜欢的那个L (Hospital法则好像是他雇人做的，是个有钱人) 然后是他哥哥Jacobi的，最后一份是盖着英 国邮戳的，必然是Newton的，John自己说“我从它的利爪上认出了这头狮子．”据说当年Newton从造币厂回去，看到了Bernoulli的题， 感觉浑身不爽，熬夜到凌晨4点，就搞定了。这么多解答当中，John的应该是最漂亮的，类比了Fermat原理，用光学一下做了出来。但是从影响来说， Jacobi的做法真正体现了变分思想。</p>
+<p>1．<br>John Bernoulli在1696年把最速降线问题在一个叫做《教师学报》的杂志上面提出，公开挑战主要是针对他的哥哥Jacobi.Bernoulli，这 两个人在学术让一直相互不忿，据说当年John求悬链线的方程，熬了一夜就搞定了，Jacobi做了一年还认为悬链线应该是抛物线，实在是很没面子。那个 杂志好像是Leibniz搞得，很牛，欧洲的牛人们都来做这个东西。到最后，Jhon收的了5份答案，有他自己的，Leibniz的，还有一个 L.Hospital侯爵的 (我们比较喜欢的那个L.Hospital法则好像是他雇人做的，是个有钱人) 然后是他哥哥Jacobi的，最后一份是盖着英 国邮戳的，必然是Newton的，John自己说“我从它的利爪上认出了这头狮子．”据说当年Newton从造币厂回去，看到了Bernoulli的题， 感觉浑身不爽，熬夜到凌晨4点，就搞定了。这么多解答当中，John的应该是最漂亮的，类比了Fermat原理，用光学一下做了出来。但是从影响来说， Jacobi的做法真正体现了变分思想。</p>
 <p>2．<br>Bernoulli一家在欧洲享有盛誉，有一个传说，讲的是Daniel Bernoulli (他是John Bernoulli的儿子) 有一次正在做穿过欧洲的旅行，他与一个陌生人聊天，他很谦虚的自我介绍：“我是Daniel Bernoullis。”那个人当时就怒了，说：“我是还是Issac Newton呢。”Daniel从此之后在很多的场合深情的回忆起这一次经历把他当作他曾经听过的最衷心的赞扬。</p>
 <hr>
 <h2 id="Heroes-In-My-Heart-2"><a href="#Heroes-In-My-Heart-2" class="headerlink" title="Heroes In My Heart (2)"></a>Heroes In My Heart (2)</h2><h3 id="Bernoulli家族-2"><a href="#Bernoulli家族-2" class="headerlink" title="Bernoulli家族 (2)"></a>Bernoulli家族 (2)</h3><p>3．<br>John &amp; Jacobi这两个Bernoulli人，都算不出来自然数倒数的平方和这个级数，Euler从他老师John那里知道的，并且给出了 $\frac{2\pi}{6}$ 这个正确的 答案。</p>
@@ -278,17 +188,17 @@
 <h2 id="Heroes-In-My-Heart-3"><a href="#Heroes-In-My-Heart-3" class="headerlink" title="Heroes In My Heart (3)"></a>Heroes In My Heart (3)</h2><h3 id="四色定理"><a href="#四色定理" class="headerlink" title="四色定理"></a>四色定理</h3><blockquote>
 <p>证明是一个偶像，数学家在这个偶像前折磨自己。——A (Eddington </p>
 </blockquote>
-<p> 1．<br>一次拓扑课，Minkowski向学生们自负的宣称：“这个定理没有证明的最要的原因是至今只有一些三流的数学家在这上面花过时间。下面我就来证明 它。”…… (这节课结束的时候，没有证完，到下一次课的时候，Minkowski继续证明，一直几个星期过去了……一个阴霾的早上，Minkowski跨 入教室，那时候，恰好一道闪电划过长空，雷声震耳，Minkowski很严肃的说：“上天被我的骄傲激怒了，我的证明是不完全的……”</p>
+<p> 1．<br>一次拓扑课，Minkowski向学生们自负的宣称：“这个定理没有证明的最要的原因是至今只有一些三流的数学家在这上面花过时间。下面我就来证明 它。”…… 这节课结束的时候，没有证完，到下一次课的时候，Minkowski继续证明，一直几个星期过去了……一个阴霾的早上，Minkowski跨 入教室，那时候，恰好一道闪电划过长空，雷声震耳，Minkowski很严肃的说：“上天被我的骄傲激怒了，我的证明是不完全的……”</p>
 <p>2．<br>1942 年的时候，Lefschetz去Havard做了个报告，Birkhoff是他的好朋友，讲座结束之后，就问他最近在Princeton有没有什么有意思 的东西。Lefschetz说有一个人刚刚证明了四色猜想。Birkhoff严重的不相信，说要是这是真的，就用手和膝盖，直接爬到Princeton的 Fine Hall去。</p>
 <hr>
 <h2 id="Heroes-In-My-Heart-4"><a href="#Heroes-In-My-Heart-4" class="headerlink" title="Heroes In My Heart (4)"></a>Heroes In My Heart (4)</h2><h3 id="做数论的人-1"><a href="#做数论的人-1" class="headerlink" title="做数论的人 (1)"></a>做数论的人 (1)</h3><blockquote>
 <p>从实用的观点来判断，我的数学生涯的价值等于零。——Hardy</p>
 </blockquote>
-<p>1．<br>Lev Landau这位俄国最伟大的物理学家惊叹道：“为什么素数要相加呢？素数是用来相乘而不是相加的。”据说这是Landau看了Goldbach(哥德巴 赫)猜想之后的感觉。术业有专攻呀 ( ( ( ( ( (</p>
+<p>1．<br>Lev Landau这位俄国最伟大的物理学家惊叹道：“为什么素数要相加呢？素数是用来相乘而不是相加的。”据说这是Landau看了Goldbach(哥德巴 赫)猜想之后的感觉。术业有专攻呀……</p>
 <p>2．<br>Graham说：“我知道一数论学家，他仅在素数的日子和妻子同房：在月初，这是挺不错的，2，3，5，7；但是到月终的日子就显得难过了，先是素数变 稀，19，23，然后是一个大的间隙，一下子就蹦到了29，……”</p>
 <hr>
 <h2 id="Heroes-In-My-Heart-5"><a href="#Heroes-In-My-Heart-5" class="headerlink" title="Heroes In My Heart (5)"></a>Heroes In My Heart (5)</h2><h3 id="做数论的人-2"><a href="#做数论的人-2" class="headerlink" title="做数论的人 (2)"></a>做数论的人 (2)</h3><p>3．<br>由于Fermat大定理的名声，在New York的地铁车站出现了乱涂在墙上的话：$x^n + y^n = z^n$ 没有解对此我已经发现了一种真正美妙的证明，可惜我现在没时间写出来，因为我的火车正在开来。</p>
-<p>4.<br>Hilbert 曾有一个学生，给了他一篇论文来证明Riemann猜想，尽管其中有个无法挽回的错误，Hilbert还是被深深的吸引了。第二年，这个学生不知道怎么回事死了，Hilbert要求在葬礼上做一个演说。那天，风雨瑟瑟，这个学生的家属们哀不胜收。Hilbert开始致词，首先指出，这样的天才这么早离开我 们实在是痛惜呀，众人同感，哭得越来越凶。接下来，Hilbert说，尽管这个人的证明有错，但是如果按照这条路走，应该有可能证明Riemann猜想， 再接下来，Hilbert继续热烈的冒雨讲道：“事实上，让我们考虑一个单变量的复函数 ( ( ( ( (”众人皆倒。</p>
+<p>4.<br>Hilbert 曾有一个学生，给了他一篇论文来证明Riemann猜想，尽管其中有个无法挽回的错误，Hilbert还是被深深的吸引了。第二年，这个学生不知道怎么回事死了，Hilbert要求在葬礼上做一个演说。那天，风雨瑟瑟，这个学生的家属们哀不胜收。Hilbert开始致词，首先指出，这样的天才这么早离开我 们实在是痛惜呀，众人同感，哭得越来越凶。接下来，Hilbert说，尽管这个人的证明有错，但是如果按照这条路走，应该有可能证明Riemann猜想， 再接下来，Hilbert继续热烈的冒雨讲道：“事实上，让我们考虑一个单变量的复函数…”众人皆倒。</p>
 <hr>
 <h2 id="Heroes-In-My-Heart-6"><a href="#Heroes-In-My-Heart-6" class="headerlink" title="Heroes In My Heart (6)"></a>Heroes In My Heart (6)</h2><h3 id="做数论的人-3"><a href="#做数论的人-3" class="headerlink" title="做数论的人 (3)"></a>做数论的人 (3)</h3><p>5．</p>
 <p>有一个人叫做Paul Wolfskehl，大学读过数学，痴狂的迷恋一个漂亮的女孩子，令他沮丧的是他被无数次被拒绝。感到无所依靠，于是定下了自杀的日子，决定在午夜钟声响 起的时候，告别这个世界，再也不理会尘世间的事。Wolfskehl在剩下的日子里依然努力的工作，当然不是数学，而是一些商业的东西，最后一天，他写了 遗嘱，并且给他所有的朋友亲戚写了信。由于他的效率比较高的缘故，在午夜之前，他就搞定了所有的事情，剩下的几个小时，他就跑到了图书馆，随便翻起了数学 书。很快，被Kummer解释Cauchy等前人做Fermat大定理为什么不行的一篇论文吸引住了。那是一篇伟大的论文，适合要自杀的数学家最后的时刻 阅读。Wolfskehl竟然发现了Kummer的一个bug，一直到黎明的时候，他做出了这个证明。他自己狂骄傲不止，于是一切皆成烟云……这样他重新 立了遗嘱，把他财产的一大部分设为一个奖，讲给第一个证明Fermat定理的人10万马克……这就是Wolfskehl奖的来历。</p>
@@ -307,22 +217,22 @@
 <p>5．<br>David Hilbert并不是Gottingen毕业的。19世纪80年代，Berlin大学的博士论文答辩，需要2名学生作为对手，他们向你不停的发问。 Hilbert的一个对手是Emil Wiechert(埃米尔 (魏恰特)，后来是最著名的地震学家。那时候，德国 (也许叫做普鲁士) 的大学教授特别少。Berlin之后3名数学教授，一般的 大学至多2个。</p>
 <p>Hilbert的博士宣誓仪式，校长主持：“我庄严的要你回答，宣誓是否能使你用真诚的良心承担如下的许诺和保证：你讲勇敢的去捍卫真 正的科学，将其开拓，为之添彩；既不为厚禄所驱，也不为虚名所赶，只求上帝真理的神辉普照大地，发扬光大。”</p>
 <p>欧很想知道现在北大的授予博士仪式是不是也有类似的话。</p>
-<p>6．<br>Hilbert上了年纪的时候，一次听到一群年轻人正在谈论一个他知道数学家。那时候，Minkowski这些他很熟的人，有很多都已经故去。他特别关心 正在被谈论的这个人，当大家说完这个人有几个孩子之类的事情之后，他就问说：“ ( ( (他还‘存在’么 (…… (”</p>
+<p>6．<br>Hilbert上了年纪的时候，一次听到一群年轻人正在谈论一个他知道数学家。那时候，Minkowski这些他很熟的人，有很多都已经故去。他特别关心 正在被谈论的这个人，当大家说完这个人有几个孩子之类的事情之后，他就问说：“ 他还‘存在’么 …… ”</p>
 <hr>
-<h2 id="Heroes-In-My-Heart-11"><a href="#Heroes-In-My-Heart-11" class="headerlink" title="Heroes In My Heart (11)"></a>Heroes In My Heart (11)</h2><h3 id="Gottingen的传说-5"><a href="#Gottingen的传说-5" class="headerlink" title="Gottingen的传说 (5)"></a>Gottingen的传说 (5)</h3><p>7．<br>一次在Hilbert的讨论班上，一个年轻人报告，其中用了一个很漂亮的定理，Hilbert说“这真是一个妙不可言 (wunderbaschon) 的定 理呀，是谁发现的？”那个年轻人茫然的站了很久，对Hilbert说：“是你 (……”。</p>
+<h2 id="Heroes-In-My-Heart-11"><a href="#Heroes-In-My-Heart-11" class="headerlink" title="Heroes In My Heart (11)"></a>Heroes In My Heart (11)</h2><h3 id="Gottingen的传说-5"><a href="#Gottingen的传说-5" class="headerlink" title="Gottingen的传说 (5)"></a>Gottingen的传说 (5)</h3><p>7．<br>一次在Hilbert的讨论班上，一个年轻人报告，其中用了一个很漂亮的定理，Hilbert说“这真是一个妙不可言 (wunderbaschon) 的定 理呀，是谁发现的？”那个年轻人茫然的站了很久，对Hilbert说：“是你……”。</p>
 <p>8．<br>Gottingen广为流传的一个关于Minkowski的故事，说是他在街上散步，发现一个年轻人正在默默想着某个很重要的问题，于是 Minkowski轻轻的拍拍他的肩膀，告诉他“收敛是肯定的”，年轻人感激而笑。</p>
 <hr>
 <h2 id="Herose-In-My-Heart-12"><a href="#Herose-In-My-Heart-12" class="headerlink" title="Herose In My Heart (12)"></a>Herose In My Heart (12)</h2><h3 id="Gottingen的传说-6"><a href="#Gottingen的传说-6" class="headerlink" title="Gottingen的传说 (6)"></a>Gottingen的传说 (6)</h3><p>9．<br>H.Weyl 刚去Gottingen的时候，被拒之”圈”外。所谓的圈，是指Toeplitz， Schmidt， Hecke和Haar等一群年轻人，大家一起谈论数学物理，很有贵族的感觉。一次，大家在等待Hilbert来上课，Toeplitz指着远处的Weyl 说：“看那边的那个家伙，他就是Weyl先生。他也是那种考虑数学的人。”就这样子，Weyl就不属于“圈”这个集合了。这个故事是Courant讲的， Haar当时是Hilbert的助手，Gottingen当时的人们无一不认为他将是那种不朽的数学家。但是事实证明，Weyl的伟大无人能比，尽管 Haar在测度论上贡献突出，但是Courant还是说他和Weyl“根本没法相比。”</p>
-<p>10．<br>von Karman (冯 (卡门) 通过Haar的介绍来到Gottingen，等到Haar去了匈牙利之后，他很快成为“圈”内的领袖。圈外人Weyl再一次证明 了他的优秀，他和Karman同时爱上了才貌双全的一个女孩，并且展开了一场竞争。最终圈内人都感到特别的沮丧，因为那个女孩子选择了Weyl。</p>
+<p>10．<br>von Karman (冯.卡门) 通过Haar的介绍来到Gottingen，等到Haar去了匈牙利之后，他很快成为“圈”内的领袖。圈外人Weyl再一次证明 了他的优秀，他和Karman同时爱上了才貌双全的一个女孩，并且展开了一场竞争。最终圈内人都感到特别的沮丧，因为那个女孩子选择了Weyl。</p>
 <hr>
 <h2 id="Heroes-In-My-Heart-13"><a href="#Heroes-In-My-Heart-13" class="headerlink" title="Heroes In My Heart (13)"></a>Heroes In My Heart (13)</h2><h3 id="Gottingen讲得太多了吧"><a href="#Gottingen讲得太多了吧" class="headerlink" title="Gottingen讲得太多了吧"></a>Gottingen讲得太多了吧</h3><p>先停几次，多讲几件烂事<br>然后再讲<br>hiahia</p>
 <p>先介绍一个人，L.V.Ahlfors， 和另一个美国的数学家共同分享了第一届的Feilds奖。欧知道他的一部分工作，就是展示给大家复分析和双曲几何之间的深刻联系，把曲率之类的几何概念引 入了复分析，给出了Schwarz引理的几何上的漂亮解释。他还在共形映射，Riemann曲面领域都是贡献非凡。</p>
 <p>下面是一个很传奇的事情，欧希望那些认为数学没有“用”的看看数学家是如何认为数学有用的。hehe</p>
-<p>L (V (Ahlfors说这些话的时候，正是二战受封锁的时候“Feilds奖章给了我一个很实在的好处，当被允许从芬兰去瑞典的时 候，我想搭火车去见一下我的妻子，可是身上只有10元钱。<br>我翻出了Fields奖章，把它拿到当铺当了， (！！！！)  从而有了足够的路费…… 我确信那是唯一一个在当铺呆过的Feilds奖章……”</p>
+<p>L.V.Ahlfors说这些话的时候，正是二战受封锁的时候“Feilds奖章给了我一个很实在的好处，当被允许从芬兰去瑞典的时 候，我想搭火车去见一下我的妻子，可是身上只有10元钱。<br>我翻出了Fields奖章，把它拿到当铺当了， (！！！！)  从而有了足够的路费…… 我确信那是唯一一个在当铺呆过的Feilds奖章……”</p>
 <hr>
 <h2 id="Heroes-In-My-Heart-14"><a href="#Heroes-In-My-Heart-14" class="headerlink" title="Heroes In My Heart (14)"></a>Heroes In My Heart (14)</h2><h3 id="在讲几个小事情，都是蛮有意思的那种"><a href="#在讲几个小事情，都是蛮有意思的那种" class="headerlink" title="在讲几个小事情，都是蛮有意思的那种"></a>在讲几个小事情，都是蛮有意思的那种</h3><p>明天继续Gottingen</p>
 <p>这一个是因果循环的</p>
-<p>Hilbert 写的第一篇关于Dirichlet原理的文章，希望Fredholm能够欣赏，但是Fredhold根本就没看；F (Riesz写了很多文章，希望 Hilbert能够欣赏，但是Hilbert根本就没看；M.Riesz写了很多文章，希望F.Riesz能够欣赏，但是F (Riesz根本就没看……</p>
+<p>Hilbert 写的第一篇关于Dirichlet原理的文章，希望Fredholm能够欣赏，但是Fredhold根本就没看；F.Riesz写了很多文章，希望 Hilbert能够欣赏，但是Hilbert根本就没看；M.Riesz写了很多文章，希望F.Riesz能够欣赏，但是F.Riesz根本就没看……</p>
 <p>再来一个苏联大牛的</p>
 <p>39年的时候，Kolmogorov决定在冰水中游泳，结果以住院告终，医生一致认为他差点点死掉；但是，70岁的时候，突然决定到莫 斯科河里游泳，仍然是冰水，这一次却没有事情。</p>
 <hr>
@@ -639,439 +549,225 @@
 <p>还要提一下一本杂志，中科院出的，叫做 数学译林， 在北大图书馆的四楼就能找到， 每次在图书馆里无聊的时候，我就去翻看上面的故事，这个杂志堪称为给数学系学生看的最好的杂志了。其中不但有很多传记和历史，还有前沿的数学工作的介绍， 经典的东西的回顾。</p>
 <p>以上这些书的并集，也许不能完全的包含这几十篇东西，那么其差集就是平时老师同学讲的故事和某些专业书里作者随手插的花絮 (</p>
 <p>到这里就真的结束了吧，要毕业了。又想到了一个小故事是Halmos的，他写了一本著名的书叫做Measure Theory，当他完成此书的时候，心中喜悦难以抑制，向众人宣布:“我刚写完了Measure Theory的最后一个字！！”有人问：“最后一个字是什么？”Halmos当时愣住了，连忙赶回办公室，再跑回来，告诉他们说是什么什么。我也写完了， 最后一段话和本文无关，写给远在千里之外的一个女孩，每一天到bbs上的时候，我总是假设你也上bbs，你也来看我的连载，希望你能喜欢这些故事哪怕只有 一个，尽管你不喜欢数学也不喜欢我。</p>
-    </div>
-  </div>
-  
-    <div class="copy-right">
-      <div class="markdown-body">
-        <blockquote>
+</section>
+    <!-- Tags START -->
+    
+      <div class="tags">
+        <span>Tags:</span>
         
-        
-          本文作者 : Matrixor <br/>
-        
-        原文链接 : <a href="">https://github.com/HiMatrixor/HiMatrixor.github.io/heros-in-my-heart/</a><br>
-        版权声明 : 本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="noopener">CC BY-NC-SA 4.0</a> 许可协议。转载请联系作者！
-        </blockquote>
-      </div>
-    </div>
-  
-  
-  
-    <div class="social-share"
-  style="margin-top: -2rem"
-  data-wechat-qrcode-title="<p>微信扫一扫</p>"
-  data-wechat-qrcode-helper="<p>微信右上角, 扫一扫分享</p>"
-   data-sites="weibo, wechat, douban, facebook, twitter" 
-  
->
-  <span style="color: #6b7487; font-size: 1.4rem;">分享到: </span>
-</div>
-<script src="https://cdn.bootcss.com/social-share.js/1.0.16/js/social-share.min.js" async>
-  
+  <a href="/tags#Heros in my heart" >
+    <span class="tag-code">Heros in my heart</span>
+  </a>
 
-  
-    <div id="reward">
-  
-    <p id="reward-meta">知识 & 情怀 | 二者兼得</p>
-  
-  <button id="reward-btn">
-    
-    <span>投食</span>
-  </button>
-  <div id="reward-qrcode">
-    
-      <div class="reward-qrcode--container">
-        <img class="qrcode-img" src="/images/wechat.png" alt="微信扫一扫, 向我投食">
-        <p class="qrcode-meta">微信扫一扫, 向我投食</p>
       </div>
     
-      <div class="reward-qrcode--container">
-        <img class="qrcode-img" src="/images/alipay.png" alt="支付宝扫一扫, 向我投食">
-        <p class="qrcode-meta">支付宝扫一扫, 向我投食</p>
-      </div>
+    <!-- Tags END -->
+    <!-- NAV START -->
+    
+  <div class="nav-container">
+    <!-- reverse left and right to put prev and next in a more logic postition -->
+    
+      <a class="nav-left" href="/question-and-answering-to-Xiao/">
+        <span class="nav-arrow">← </span>
+        
+          代数曲面纤维化答疑
+        
+      </a>
+    
     
   </div>
 
-</div>
+    <!-- NAV END -->
+    <!-- 打赏 START -->
+    
+      <div class="money-like">
+        <div class="reward-btn">
+          赏
+          <span class="money-code">
+            <span class="alipay-code">
+              <div class="code-image"></div>
+              <b>使用支付宝打赏</b>
+            </span>
+            <span class="wechat-code">
+              <div class="code-image"></div>
+              <b>使用微信打赏</b>
+            </span>
+          </span>
+        </div>
+        <p class="notice">若你觉得我的文章对你有帮助，欢迎点击上方按钮对我打赏</p>
+      </div>
+    
+    <!-- 打赏 END -->
+    <!-- 二维码 START -->
+    
+      <div class="qrcode">
+        <canvas id="share-qrcode"></canvas>
+        <p class="notice">扫描二维码，分享此文章</p>
+      </div>
+    
+    <!-- 二维码 END -->
+    
+      <!-- Gitment START -->
+      <div id="comments"></div>
+      <!-- Gitment END -->
+    
+  </article>
+  <!-- Article END -->
+  <!-- Catalog START -->
+  
+    <aside class="catalog-container">
+  <div class="toc-main">
+    <strong class="toc-title">Catalog</strong>
+    
+      <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#序"><span class="toc-nav-text">序</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Heroes-In-My-Heart-1"><span class="toc-nav-text">Heroes In My Heart (1)</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#Bernoulli-家族-1"><span class="toc-nav-text">Bernoulli 家族 (1)</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Heroes-In-My-Heart-2"><span class="toc-nav-text">Heroes In My Heart (2)</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#Bernoulli家族-2"><span class="toc-nav-text">Bernoulli家族 (2)</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Heroes-In-My-Heart-3"><span class="toc-nav-text">Heroes In My Heart (3)</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#四色定理"><span class="toc-nav-text">四色定理</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Heroes-In-My-Heart-4"><span class="toc-nav-text">Heroes In My Heart (4)</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#做数论的人-1"><span class="toc-nav-text">做数论的人 (1)</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Heroes-In-My-Heart-5"><span class="toc-nav-text">Heroes In My Heart (5)</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#做数论的人-2"><span class="toc-nav-text">做数论的人 (2)</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Heroes-In-My-Heart-6"><span class="toc-nav-text">Heroes In My Heart (6)</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#做数论的人-3"><span class="toc-nav-text">做数论的人 (3)</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Heroes-In-My-Heart-7"><span class="toc-nav-text">Heroes In My Heart (7)</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#Gottingen的传说-1"><span class="toc-nav-text">Gottingen的传说 (1)</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Heroes-In-My-Heart-8"><span class="toc-nav-text">Heroes In My Heart (8)</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#Gottingen-的传说-2"><span class="toc-nav-text">Gottingen 的传说(2)</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Heroes-In-My-Heart-9"><span class="toc-nav-text">Heroes In My Heart (9)</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#Gottingen的传说-3"><span class="toc-nav-text">Gottingen的传说 (3)</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Heroes-In-My-Heart-10"><span class="toc-nav-text">Heroes In My Heart (10)</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#Gottingen的传说-4"><span class="toc-nav-text">Gottingen的传说 (4)</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Heroes-In-My-Heart-11"><span class="toc-nav-text">Heroes In My Heart (11)</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#Gottingen的传说-5"><span class="toc-nav-text">Gottingen的传说 (5)</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Herose-In-My-Heart-12"><span class="toc-nav-text">Herose In My Heart (12)</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#Gottingen的传说-6"><span class="toc-nav-text">Gottingen的传说 (6)</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Heroes-In-My-Heart-13"><span class="toc-nav-text">Heroes In My Heart (13)</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#Gottingen讲得太多了吧"><span class="toc-nav-text">Gottingen讲得太多了吧</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Heroes-In-My-Heart-14"><span class="toc-nav-text">Heroes In My Heart (14)</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#在讲几个小事情，都是蛮有意思的那种"><span class="toc-nav-text">在讲几个小事情，都是蛮有意思的那种</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Heroes-In-My-Heart-15"><span class="toc-nav-text">Heroes In My Heart (15)</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#Gottingen-的传说-7"><span class="toc-nav-text">Gottingen 的传说 (7)</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#开始讲一下Edmund-Landau的故事。"><span class="toc-nav-text">开始讲一下Edmund Landau的故事。</span></a></li></ol></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Heroes-In-My-Heart-16"><span class="toc-nav-text">Heroes In My Heart (16)</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#Gottingen的传说-8"><span class="toc-nav-text">Gottingen的传说 (8)</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#继续讲Landau的故事和Landau讲过的故事"><span class="toc-nav-text">继续讲Landau的故事和Landau讲过的故事</span></a></li></ol></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Heroes-In-My-Heart-17"><span class="toc-nav-text">Heroes In My Heart (17)</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#Gottingen的传说-9"><span class="toc-nav-text">Gottingen的传说 (9)</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Heroes-In-My-Heart-18"><span class="toc-nav-text">Heroes In My Heart (18)</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#Gottingen的传说-10"><span class="toc-nav-text">Gottingen的传说 (10)</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Heroes-In-My-Heart-19"><span class="toc-nav-text">Heroes In My Heart (19)</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#Gottingen的传说-11"><span class="toc-nav-text">Gottingen的传说 (11)</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Heroes-In-My-Heart-20"><span class="toc-nav-text">Heroes In My Heart (20)</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#Einstein和他的广义相对论"><span class="toc-nav-text">Einstein和他的广义相对论</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Heroes-In-My-Heart-21"><span class="toc-nav-text">Heroes In My Heart (21)</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#说两个欧听来的故事"><span class="toc-nav-text">说两个欧听来的故事</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Heroes-In-My-Heart-22"><span class="toc-nav-text">Heroes In My Heart (22)</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#还是讲-Einstein"><span class="toc-nav-text">还是讲 Einstein</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Heroes-In-My-Heart-23"><span class="toc-nav-text">Heroes In My Heart (23)</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#讲几个Einstein和数学家的事情"><span class="toc-nav-text">讲几个Einstein和数学家的事情</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Heroes-In-My-Heart-24"><span class="toc-nav-text">Heroes In My Heart (24)</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#Von-Neumann的就业态度"><span class="toc-nav-text">Von Neumann的就业态度</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Heroes-In-My-Heart-25"><span class="toc-nav-text">Heroes In My Heart (25)</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#继续冯-诺伊曼的表演"><span class="toc-nav-text">继续冯 (诺伊曼的表演</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Heroes-In-My-Heart-26"><span class="toc-nav-text">Heroes In My Heart (26)</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#最后两个关于冯-诺伊曼的故事"><span class="toc-nav-text">最后两个关于冯 (诺伊曼的故事</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Heroes-In-My-Heart-27"><span class="toc-nav-text">Heroes In My Heart (27)</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#数学有害健康"><span class="toc-nav-text">数学有害健康</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Heroes-In-My-Heart-28"><span class="toc-nav-text">Heroes In My Heart (28)</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#来说一个古老一点的人物-Pascal"><span class="toc-nav-text">来说一个古老一点的人物 Pascal</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Heroes-In-My-Heart-29"><span class="toc-nav-text">Heroes In My Heart (29)</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#两个姓柯的牛人"><span class="toc-nav-text">两个姓柯的牛人</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Heroes-In-My-Heart-30"><span class="toc-nav-text">Heroes In My Heart (30)</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#说几个数学家作为教师的生涯"><span class="toc-nav-text">说几个数学家作为教师的生涯</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Heroes-In-My-Heart-31"><span class="toc-nav-text">Heroes In My Heart (31)</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#Lebesgue-讲课不错"><span class="toc-nav-text">Lebesgue 讲课不错</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Heroes-In-My-Heart-32"><span class="toc-nav-text">Heroes In My Heart (32)</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#证明了-pi-是超越的男人"><span class="toc-nav-text">证明了$\pi$是超越的男人</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Heroes-In-My-Heart-33"><span class="toc-nav-text">Heroes In My Heart (33)</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Heroes-In-My-Heart-34"><span class="toc-nav-text">Heroes In My Heart (34)</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Heroes-In-My-Heart-35"><span class="toc-nav-text">Heroes In My Heart (35)</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Heroes-In-My-Heart-36"><span class="toc-nav-text">Heroes In My Heart (36)</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#Brikhoff：上个世纪初美国最著名的数学家"><span class="toc-nav-text">Brikhoff：上个世纪初美国最著名的数学家</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Heroes-In-My-Heart-37"><span class="toc-nav-text">Heroes In My Heart (37)</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Heroes-In-My-Heart-38"><span class="toc-nav-text">Heroes In My Heart (38)</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Heroes-In-My-Heart-39"><span class="toc-nav-text">Heroes In My Heart (39)</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Heroes-In-My-Heart-40"><span class="toc-nav-text">Heroes In My Heart (40)</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Heroes-In-My-Heart-41"><span class="toc-nav-text">Heroes In My Heart (41)</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#波兰的数学家"><span class="toc-nav-text">波兰的数学家</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Heroes-In-My-Heart-42"><span class="toc-nav-text">Heroes In My Heart (42)</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Heroes-In-My-Heart-43"><span class="toc-nav-text">Heroes In My Heart (43)</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Heroes-In-My-Heart-44"><span class="toc-nav-text">Heroes In My Heart (44)</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#王诗宬老师-1"><span class="toc-nav-text">王诗宬老师 (1)</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Heroes-In-My-Heart-45"><span class="toc-nav-text">Heroes In My Heart (45)</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#王诗宬老师-2"><span class="toc-nav-text">王诗宬老师 (2)</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Heroes-In-My-Heart-46"><span class="toc-nav-text">Heroes In My Heart (46)</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#开始说一下mm数学家"><span class="toc-nav-text">开始说一下mm数学家 :-)</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Heroes-In-My-Heart-47"><span class="toc-nav-text">Heroes In My Heart (47)</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#mm数学家之二"><span class="toc-nav-text">mm数学家之二</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Heroes-In-My-Heart-48"><span class="toc-nav-text">Heroes In My Heart (48)</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#mm数学家之三"><span class="toc-nav-text">mm数学家之三</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Heroes-In-My-Heart-49"><span class="toc-nav-text">Heroes In My Heart (49)</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#mm数学家之四"><span class="toc-nav-text">mm数学家之四</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Heroes-In-My-Heart-50"><span class="toc-nav-text">Heroes In My Heart (50)</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Heroes-In-My-Heart-51"><span class="toc-nav-text">Heroes In My Heart (51)</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#Hilbert为什么不去证明Fermat大定理"><span class="toc-nav-text">Hilbert为什么不去证明Fermat大定理</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Heroes-In-My-Heart-52"><span class="toc-nav-text">Heroes In My Heart (52)</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#讲讲-Whitney"><span class="toc-nav-text">讲讲 Whitney</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Heroes-In-My-Heart-53"><span class="toc-nav-text">Heroes In My Heart (53)</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Heroes-In-My-Heart-54"><span class="toc-nav-text">Heroes In My Heart (54)</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Heroes-In-My-Heart-55"><span class="toc-nav-text">Heroes In My Heart (55)</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#说几个和监狱有关系的事情"><span class="toc-nav-text">说几个和监狱有关系的事情</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Heroes-In-My-Heart-56"><span class="toc-nav-text">Heroes In My Heart (56)</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Heroes-In-My-Heart-57"><span class="toc-nav-text">Heroes In My Heart (57)</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#名师出高徒，Gauss和Newton这样的人除外"><span class="toc-nav-text">名师出高徒，Gauss和Newton这样的人除外</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Heroes-In-My-Heart-58"><span class="toc-nav-text">Heroes In My Heart (58)</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#Chicago大学数学系教授的工资"><span class="toc-nav-text">Chicago大学数学系教授的工资</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Heroes-In-My-Heart-59"><span class="toc-nav-text">Heroes In My Heart (59)</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Heroes-In-My-Heart-60"><span class="toc-nav-text">Heroes In My Heart (60)</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#数学家们之间的过节"><span class="toc-nav-text">数学家们之间的过节</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Heros-in-My-Heart-61"><span class="toc-nav-text">Heros in My Heart (61)</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#Kronceker-和-Brouwer"><span class="toc-nav-text">Kronceker 和 Brouwer</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Heros-in-My-Heart-62"><span class="toc-nav-text">Heros in My Heart (62)</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#三个做作业的故事"><span class="toc-nav-text">三个做作业的故事</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Heros-in-My-Heart-63"><span class="toc-nav-text">Heros in My Heart (63)</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Heros-in-My-Heart-64"><span class="toc-nav-text">Heros in My Heart (64)</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#Kolmogorov-1"><span class="toc-nav-text">Kolmogorov (1)</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Heros-in-My-Heart-65"><span class="toc-nav-text">Heros in My Heart (65)</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#Kolmogorov-2"><span class="toc-nav-text">Kolmogorov (2)</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Heros-in-My-Heart-66"><span class="toc-nav-text">Heros in My Heart (66)</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#后记"><span class="toc-nav-text">后记</span></a></li></ol>
+    
+  </div>
+</aside>
+  
+  <!-- Catalog END -->
+</main>
 
 <script>
-  (() => {
-    let button = document.querySelector('#reward-btn'),
-      qrcode = document.querySelector('#reward-qrcode'),
-      display = false;
-    
-    button.addEventListener('click', () => {
-      qrcode.style.display = display ? 'none' : 'block'
-      display = !display
-    }, false)
-  })()
-</script>
-  
-
-  <div class="article-footer">
-    <div class="article-meta pull-left">
-      <span>
-        
-          <i class="iconfont icon-06tags"></i>标签: 
-          
-          <span class="span--tag">
-            <a href="/tags/Heros-in-my-heart/">
-              #Heros in my heart
-            </a>
-          </span>
-          
-        
-      </span>
-    </div>
-    <div class="article-meta pull-right">
-    </div>
-  </div>
-</div>
-
-
-  <aside id="sidebar">
-    <p id="sidebar-header"></p>
-    <ol id="sidebar-toc"></ol>
-  </aside>
-  <script async>setTimeout(generateToc, 10);</script>
-
-
-  <nav class="post-navigation">
-    
-      <div class="nav-pre">
-        <i class="iconfont icon-prev"></i>
-        上一篇:
-        <a href="/question-and-answering-to-Xiao/" target="_self">代数曲面纤维化答疑</a>
-      </div>
-    
-    
-  </nav>
-
-  
-    <a href="#comment" class="comment-anchor"></a>
-<div class="comment-title"><i class="iconfont icon-footprint"></i> 留下足迹 <i class="iconfont icon-footprint"></i></div>
-<div id="vcomments"></div>
-
-<script defer>
-  if( true ) {
-    let path = getRealPath()
-    new Valine({
-      el: "#vcomments",
-      appId: "Hyq9wkH495DgNHWhDQCOfQSp-gzGzoHsz",
-      appKey: "WaR7nrzhliHj9aVwdQzkdlGd",
-      notify: false,
-      verify: false,
-      avatar: "robohash",
-      placeholder: "正确填写邮箱, 才能及时收到回复哦♪(^∇^*)",
-      path
-    });
-  }
-</script>
-   
-
-  
-    <script defer>
-const valineAPI = (() => {
-  try {
-    AV.init("Hyq9wkH495DgNHWhDQCOfQSp-gzGzoHsz", "WaR7nrzhliHj9aVwdQzkdlGd");
-  } catch(error) {}
-  const isExist = (identity) => {
-    identity = identity || getRealPath();
-    let query = new AV.Query('Timer');
-    return new Promise((resolve, reject) => {
-      query.equalTo("identity", identity);
-      query.find().then(results => {
-        resolve(results.length > 0);
-      }, error => reject(error));
-    })
-  }
-
-  const _get = (identity) => {
-    let query = null;
-    if(identity && identity instanceof Array){
-      let querys = [];
-      for(let i = 0; i < identity.length; ++i) {
-        querys[i] = new AV.Query('Timer');
-        querys[i].equalTo('identity', identity[i]);
-      }
-      query = AV.Query.or.apply(null ,querys);
+  (function () {
+    var url = 'https://github.com/HiMatrixor/HiMatrixor.github.io/heros-in-my-heart/';
+    var banner = ''
+    if (banner !== '' && banner !== 'undefined' && banner !== 'null') {
+      $('#article-banner').css({
+        'background-image': 'url(' + banner + ')'
+      })
     } else {
-      identity = identity || getRealPath();
-      query = new AV.Query("Timer");
-      query.equalTo("identity", identity);
+      $('#article-banner').geopattern(url)
     }
+    $('.header').removeClass('fixed-header')
 
-    return new Promise((resolve, reject) => {
-      query.find()
-      .then(results => resolve(results))
-      .catch(error => reject(error))
+    // error image
+    $(".markdown-content img").on('error', function() {
+      $(this).attr('src', 'http://file.muyutech.com/error-img.png')
+      $(this).css({
+        'cursor': 'default'
+      })
     })
-  }
 
-  const create = (identity) => {
-    identity = identity || getRealPath();
-    return new Promise((resolve, reject) => {
-      let Todo = AV.Object.extend('Timer');
-      let todo = new Todo();
-      todo.set("times", 1);
-      todo.set("identity", identity);
-      todo.save().then(res => resolve(true), error => reject(error));
-    })
-  }
+    // zoom image
+    $(".markdown-content img").on('click', function() {
+      var src = $(this).attr('src')
+      if (src !== 'http://file.muyutech.com/error-img.png') {
+        var imageW = $(this).width()
+        var imageH = $(this).height()
 
-  const update = (identity) => {
-    identity = identity || getRealPath();
-    return new Promise((resolve, reject) => {
-      let query = new AV.Query('Timer');
-      query.equalTo("identity", identity);
-      query.find().then(todos => {
-        todos.forEach(todo => {
-          todo.set("times", todo.attributes.times + 1);
-        });
-        return AV.Object.saveAll(todos);
-      }).then(todos => resolve(true), error => reject(error));
-    })
-  }
+        var zoom = ($(window).width() * 0.95 / imageW).toFixed(2)
+        zoom = zoom < 1 ? 1 : zoom
+        zoom = zoom > 2 ? 2 : zoom
+        var transY = (($(window).height() - imageH) / 2).toFixed(2)
 
-  return {
-    isExist,
-    _get,
-    update,
-    create
-  }
-})()
+        $('body').append('<div class="image-view-wrap"><div class="image-view-inner"><img src="'+ src +'" /></div></div>')
+        $('.image-view-wrap').addClass('wrap-active')
+        $('.image-view-wrap img').css({
+          'width': `${imageW}`,
+          'transform': `translate3d(0, ${transY}px, 0) scale3d(${zoom}, ${zoom}, 1)`
+        })
+        $('html').css('overflow', 'hidden')
 
-const calcAndWriteTimes = () => {
-  let isPost = true;
-
-  let timerAllDOM = document.querySelectorAll(".article-timer");
-
-  if(isPost) {
-    let identity = timerAllDOM[0].getAttribute("data-identity");
-    valineAPI.isExist(identity)
-    .then(exist => {
-      if(exist) {
-        return valineAPI.update(identity);
+        $('.image-view-wrap').on('click', function() {
+          $(this).remove()
+          $('html').attr('style', '')
+        })
       }
-      return new Promise(resolve => resolve(true));
     })
-    .then( succuess => valineAPI._get(identity))
-    .then( result => timerAllDOM[0].innerText = result[0].attributes.times)
-    .catch(error => console.log(error.message))
-    return ;
-  }
-
-  let timerDOMCache = {};
-
-  for(let timerDOM of timerAllDOM) {
-    let identity = timerDOM.getAttribute("data-identity");
-    if(timerDOMCache.hasOwnProperty(identity)){
-      timerDOMCache[identity].dom.push(timerDOM);
-    }else{
-      timerDOMCache[identity] = {
-        dom: [timerDOM],
-        times: undefined
-      };
-    }
-  }
-
-  let identities = Object.keys(timerDOMCache);
-  valineAPI._get(identities).then(results => {
-    for(let result of results) {
-      let {identity, times} = result.attributes;
-      timerDOMCache[identity].times = times;
-      timerDOMCache[identity].dom.map(item => item.innerText = times);
-    }
-    for(let identity of identities) {
-      if(timerDOMCache[identity].times){
-        continue;
-      }
-      timerDOMCache[identity].dom.map(item => item.innerText = 1);
-      valineAPI.create(identity);
-    }
-  }).catch(error => console.log(error.message))
-}
-
-if(true){
-  calcAndWriteTimes();
-}
+  })();
 </script>
-   
 
+
+  <script>
+    var qr = new QRious({
+      element: document.getElementById('share-qrcode'),
+      value: document.location.href
+    });
+  </script>
+
+
+
+  <script>
+    var gitmentConfig = "yanm1ng";
+    if (gitmentConfig !== 'undefined') {
+      var gitment = new Gitment({
+        id: "Heros in my heart",
+        owner: "yanm1ng",
+        repo: "yanm1ng.github.io",
+        oauth: {
+          client_id: "0f87e490e00ee3fd87ef",
+          client_secret: "4a9d2b148e7971c2201ad12131ce8bf8159ccd2e"
+        },
+        theme: {
+          render(state, instance) {
+            const container = document.createElement('div')
+            container.lang = "en-US"
+            container.className = 'gitment-container gitment-root-container'
+            container.appendChild(instance.renderHeader(state, instance))
+            container.appendChild(instance.renderEditor(state, instance))
+            container.appendChild(instance.renderComments(state, instance))
+            container.appendChild(instance.renderFooter(state, instance))
+            return container;
+          }
+        }
+      })
+      gitment.render(document.getElementById('comments'))
+    }
+  </script>
+
+
+
+
+    <div class="scroll-top">
+  <span class="arrow-icon"></span>
 </div>
-
-
-      <footer>
-  <p class="site-info">
-    博客已运行<span id="time-to-now"></span><span class="my-face">(●'◡'●)ﾉ♥</span>
+    <footer class="app-footer">
+  <p class="copyright">
+    &copy; 2020 | Proudly powered by <a href="https://hexo.io" target="_blank">Hexo</a>
     <br>
-    谨以此博客献给我的妻子以及孩子
-    <br>
-    
+    Theme by <a href="https://github.com/yanm1ng">yanm1ng</a>
   </p>
 </footer>
 
-
-
 <script>
-const timeToNowDOM = document.querySelector("#time-to-now");
-const startTimestamp = new Date(2020, 1, 17).getTime();
-
-const updateTimeStr = () => {
-  let offset = parseInt(
-      (new Date().getTime() - startTimestamp) / 1000,
-      10
-    ),
-    day = Math.floor(offset / 86400),
-    hour = Math.floor((offset % 86400) / 3600),
-    minute = Math.floor(((offset % 86400) % 3600) / 60),
-    second = Math.floor(((offset % 86400) % 3600) % 60);
-  timeToNowDOM.innerHTML =
-    day + "天" + hour + "小时" + minute + "分钟" + second + "秒";
-  setTimeout(updateTimeStr, 500);
-}
-
-setTimeout(updateTimeStr, 500);
-</script>
-
-
-      <div class="back-to-top hidden">
-  <span>
-    <i class="iconfont icon-60"></i><span></span>%
-  </span>
-</div>
-
-<script>
-const updateIconToTop = percent => {
-  let dom = document.querySelector(".back-to-top span span");
-  dom.innerText = percent;
-  if(percent < 1) {
-    document.querySelector(".back-to-top").className = "back-to-top hidden";
-  } else {
-    document.querySelector(".back-to-top").className = "back-to-top";
+  function async(u, c) {
+    var d = document, t = 'script',
+      o = d.createElement(t),
+      s = d.getElementsByTagName(t)[0];
+    o.src = u;
+    if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+    s.parentNode.insertBefore(o, s);
   }
-}
-
-const handleScoll = () => {
-  let isRunning = false;
-  return () => {
-    if (isRunning) return;
-    isRunning = true;
-    window.requestAnimationFrame(timestamp => {
-      let scrollTop =
-          document.documentElement.scrollTop || document.body.scrollTop,
-        scrollHeight =
-          document.documentElement.scrollHeight ||
-          document.body.scrollHeight,
-        clientHeight =
-          document.documentElement.clientHeight ||
-          document.body.clientHeight;
-      isRunning = false;
-      if (scrollTop <= 1) {
-        updateIconToTop(0);
-        return;
-      }
-      if (scrollTop + clientHeight >= scrollHeight) {
-        updateIconToTop(100);
-      } else {
-        updateIconToTop(parseInt(
-          100 * scrollTop / (scrollHeight - clientHeight),
-          10
-        ));
-      }
-    });
-  };
-}
-
-const backToTop = () => {
-  let scrollTop =
-      document.documentElement.scrollTop || document.body.scrollTop,
-    delay = 10,
-    time = 200;
-  if (scrollTop <= 20) {
-    document.documentElement.scrollTop = 0;
-    document.body.scrollTop = 0;
-    return;
-  }
-  let step = Math.ceil(scrollTop * delay / time);
-  let timer = setInterval(() => {
-    scrollTop =
-      document.documentElement.scrollTop || document.body.scrollTop;
-    if (scrollTop - step <= 0) {
-      document.documentElement.scrollTop = 0;
-      document.body.scrollTop = 0;
-      clearInterval(timer);
-    } else {
-      document.documentElement.scrollTop = scrollTop - step;
-      document.body.scrollTop = scrollTop - step;
-    }
-  }, delay);
-}
-
-document.addEventListener("scroll", handleScoll(), false);
-
-document.querySelector(".back-to-top").addEventListener("click", backToTop, false);
-
 </script>
-
-    </div>
-
-    
-      <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML" async></script>
 <script>
-  (() => {
-    const mathjaxConfig = {
-      showProcessingMessages: false, //关闭js加载过程信息
-      messageStyle: "none", //不显示信息
-      jax: ["input/TeX", "output/HTML-CSS"],
-      tex2jax: {
-        inlineMath: [["$", "$"], ["\\(", "\\)"]], //行内公式选择符
-        displayMath: [["$$", "$$"], ["\\[", "\\]"]], //段内公式选择符
-        skipTags: ["script", "noscript", "style", "textarea", "pre", "code", "a"] //避开某些标签
-      },
-      "HTML-CSS": {
-        availableFonts: ["STIX", "TeX"], //可选字体
-        showMathMenu: false //关闭右击菜单显示
-      }
-    }
-
-    let mathjaxInterval = setInterval(() => {
-      if(!window.MathJax){
-        return;
-      }
-      window.MathJax.Hub.Config(mathjaxConfig)
-      window.MathJax.Hub.Queue(["Typeset", MathJax.Hub, document.getElementById('app')])
-
-      clearInterval(mathjaxInterval)
-    }, 10)    
-  })()
+  async("//cdnjs.cloudflare.com/ajax/libs/fastclick/1.0.6/fastclick.min.js", function(){
+    FastClick.attach(document.body);
+  })
 </script>
-    
 
-    <script src="https://cdn.bootcss.com/fancybox/3.5.2/jquery.fancybox.min.js" async></script>
-<script async>
-  let fancyTimer = setInterval(function(){
-    if(!window.$){
-      return;
-    }
-    $(document).ready(function() {
-      $(".post img").each(function () {
-        if($(this).parent().get(0).tagName.toLowerCase() === "a") {
-          return;
-        }
-        // $(this).attr("data-fancybox", "gallery"); // if you add 'data-fancybox', img will display after showed
-        var element = document.createElement("a");
-        $(element).attr("data-fancybox", "gallery");
-        $(element).attr("href", $(this).attr("src"));
-        $(this).wrap(element);
-      });
-      
-      clearInterval(fancyTimer);
+<script>
+  var hasLine = 'true';
+  async("//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js", function(){
+    $('figure pre').each(function(i, block) {
+      var figure = $(this).parents('figure');
+      if (hasLine === 'false') {
+        figure.find('.gutter').hide();
+      }
+      var lang = figure.attr('class').split(' ')[1] || 'code';
+      var codeHtml = $(this).html();
+      var codeTag = document.createElement('code');
+      codeTag.className = lang;
+      codeTag.innerHTML = codeHtml;
+      $(this).attr('class', '').empty().html(codeTag);
+      figure.attr('data-lang', lang.toUpperCase());
+      hljs.highlightBlock(block);
     });
-  }, 10);
+  })
 </script>
+<!-- Baidu Tongji -->
 
-    
+
+<script src="/js/script.js"></script>
+
   </body>
-
 </html>
