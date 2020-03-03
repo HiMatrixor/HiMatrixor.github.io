@@ -1,416 +1,107 @@
-<!DOCTYPE html>
-<html>
-  <head>
-  <meta http-equiv="content-type" content="text/html; charset=utf-8">
-  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
-  <meta name="description" content="献给我的妻子和孩子。">
-  <meta name="keyword" content="hexo-theme, vuejs">
-  
-    <link rel="shortcut icon" href="/css/images/logo.png">
-  
-  <title>
-    
-      代数曲面纤维化答疑 | Matrixor
-    
-  </title>
-  <link href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-  <link href="//cdnjs.cloudflare.com/ajax/libs/nprogress/0.2.0/nprogress.min.css" rel="stylesheet">
-  <link href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/tomorrow.min.css" rel="stylesheet">
-  
-<link rel="stylesheet" href="/css/style.css">
+extends includes/layout.pug
 
-  
-    
-<link rel="stylesheet" href="/css/plugins/gitment.css">
+block top_img
+  - var top_img = page.top_img || theme.post_meta.top_img || theme.top_img || config.top_img
+  if (top_img && page.top_img !== false)
+    - var bg_img = top_img !== true ? `background-image: url(${top_img})` : ''
+    - var flag = top_img === true ? 'no-bg' : ''
+    div#top-container(style=bg_img class=flag)
+      include ./includes/header.pug
+      #post-info
+        #post-title= page.title || _p('no_title')
+        #post-meta
+          if (theme.post_meta.date_type)
+            if (theme.post_meta.date_type === 'both')
+              time.post-meta__date
+                i.fa.fa-calendar(aria-hidden="true")
+                =' '+_p('post.created')+' '+date(page.date, config.date_format)
+                span.post-meta__separator |
+                i.fa.fa-calendar-check-o(aria-hidden="true")
+                =' '+_p('post.updated')+' '+date(page.updated, config.date_format)
+            else
+              - var date_type = theme.post_meta.date_type === 'updated' ? 'updated' : 'date'
+              time.post-meta__date #[i.fa.fa-calendar(aria-hidden="true")] #[=date(page[date_type], config.date_format)]
+          if (theme.post_meta.categories && page.categories.data.length > 0)
+            if (theme.post_meta.date_type)
+              span.post-meta__separator |
+            each item, index in page.categories.data
+              i.fa.fa-inbox.post-meta__icon(aria-hidden="true")
+              a(href=url_for(item.path)).post-meta__categories #[=item.name]
+              if (index < page.categories.data.length - 1)
+                 i.fa.fa-angle-right(aria-hidden="true")
+          if (theme.disqus.enable && theme.disqus.count)
+            if (theme.post_meta.date_type || theme.post_meta.categories && page.categories.data.length > 0)
+              span.post-meta__separator |
+            i.fa.fa-comment-o.post-meta__icon(aria-hidden="true")
+            a(href=url_for(page.path) + '#disqus_thread')
+              span.disqus-comment-count(data-disqus-identifier=page.path)
+          if (theme.wordcount && theme.wordcount.enable)
+            .post-meta-wordcount
+              span= _p('post.wordcount') + ': '
+              span.word-count= wordcount(page.content)
+              span.post-meta__separator |
+              span= _p('post.min2read', min2read(page.content, {cn: 350, en: 160}))
+  else
+    div#top-container.plain
+      include ./includes/header.pug
 
-  
-  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script src="//cdnjs.cloudflare.com/ajax/libs/geopattern/1.2.3/js/geopattern.min.js"></script>
-  <script src="//cdnjs.cloudflare.com/ajax/libs/nprogress/0.2.0/nprogress.min.js"></script>
-  
-    
-<script src="/js/qrious.js"></script>
-
-  
-  
-    
-<script src="/js/gitment.js"></script>
-
-  
-  
-  
-    <!-- MathJax support START -->
-    <script type="text/x-mathjax-config">
-      MathJax.Hub.Config({
-        tex2jax: {
-          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
-          processEscapes: true,
-          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
-        }
-      });
-    </script>
-
-    <script type="text/x-mathjax-config">
-      MathJax.Hub.Queue(function() {
-        var all = MathJax.Hub.getAllJax(), i;
-        for (i=0; i < all.length; i += 1) {
-          all[i].SourceElement().parentNode.className += ' has-jax';
-        }
-      });
-    </script>
-    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <!-- MathJax support END -->
-  
-
-
-<meta name="generator" content="Hexo 4.2.0"></head>
-<div class="wechat-share">
-  <img src="/css/images/logo.png" />
-</div>
-
-  <body>
-    <header class="header fixed-header">
-  <div class="header-container">
-    <a class="home-link" href="/">
-      <div class="logo"></div>
-      <span>Matrixor</span>
-    </a>
-    <ul class="right-list">
-      
-        <li class="list-item">
-          
-            <a href="/" class="item-link">Home</a>
-          
-        </li>
-      
-        <li class="list-item">
-          
-            <a href="/tags/" class="item-link">Tags</a>
-          
-        </li>
-      
-        <li class="list-item">
-          
-            <a href="/archives/" class="item-link">Archives</a>
-          
-        </li>
-      
-        <li class="list-item">
-          
-            <a href="/friends/" class="item-link">Link</a>
-          
-        </li>
-      
-        <li class="list-item">
-          
-            <a href="/about/" class="item-link">About</a>
-          
-        </li>
-      
-    </ul>
-    <div class="menu">
-      <span class="icon-bar"></span>
-      <span class="icon-bar"></span>
-      <span class="icon-bar"></span>
-    </div>
-    <div class="menu-mask">
-      <ul class="menu-list">
-        
-          <li class="menu-item">
-            
-              <a href="/" class="menu-link">Home</a>
-            
-          </li>
-        
-          <li class="menu-item">
-            
-              <a href="/tags/" class="menu-link">Tags</a>
-            
-          </li>
-        
-          <li class="menu-item">
-            
-              <a href="/archives/" class="menu-link">Archives</a>
-            
-          </li>
-        
-          <li class="menu-item">
-            
-              <a href="/friends/" class="menu-link">Link</a>
-            
-          </li>
-        
-          <li class="menu-item">
-            
-              <a href="/about/" class="menu-link">About</a>
-            
-          </li>
-        
-      </ul>
-    </div>
-  </div>
-</header>
-
-    <div id="article-banner">
-  <h2>代数曲面纤维化答疑</h2>
-  <p class="post-date">2020-02-25</p>
-  <div class="arrow-down">
-    <a href="javascript:;"></a>
-  </div>
-</div>
-<main class="app-body flex-box">
-  <!-- Article START -->
-  <article class="post-article">
-    <section class="markdown-content"><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>关于代数曲面纤维化的答疑. <a id="more"></a></p>
-<blockquote>
-<p>课程：代数曲面纤维化</p>
-<p>教材：《代数曲面纤维化》肖刚 著</p>
-<p>时间：2020年春季</p>
-<p>地点：暂时线上</p>
-</blockquote>
-<h3 id="First-Week"><a href="#First-Week" class="headerlink" title="First Week"></a>First Week</h3><p><strong>方</strong>：能否讲下sigma基变换？在高维有没有类似结论？有什么其他的用途？</p>
-<p><strong>陆</strong>： </p>
-<p>我记不清了. 这好像是个临时性的概念. 只是为了处理基变换时避开一些不想碰的点. 说到基变换, 我们这里多谈几句. 这是我们纤维化里最有用的几个技巧之一. 我最近算的Riccati foliation 也频繁地使用这类技巧. </p>
-<p>在你学习这个技巧时, 你需要弄清楚如下两个问题：</p>
-<ol>
-<li><strong>基变换的本质是什么？</strong> </li>
-<li><strong>为什么要做基变换？</strong> </li>
-</ol>
-<p>先回答第一个问题. 在中学代数里我们学过变量替换. 比如把 $x=t^2$ 代入到多项式 $y^2-x$ 中等等.  这种变量替换, 就是基变换概念的本质.  纤维化, 相当于一个带有时间参数 $t$ 的曲线 $f(x, y, t)=0$ . 我把 $t$ 做变量替换 $t=g(s)$ 代入方程, 那么纤维化就变成关于时间参数 $s$ 的曲线. 这就是基变换的意思.  </p>
-<p>上面都是局部的讨论. 当年把它整体化, 那么就得到我们现代语言的叙述. 此时纤维化就是一个曲面 $S$ 到基底曲线 $C$ 的投影,  $t$ 只是基底曲线的局部坐标, $x, y$ 是曲面的局部坐标, 对给定的$t$, 纤维就是那条曲线 $f(x, y, t)=0$. 基变换就是一条局部坐标 $s$ 的曲线$C’$到原曲线$C$的有限次数映射(映射局部方程就是 $t=g(s)$ ). 因此你就得到一个新的纤维化 $f(x, y, g(s))=0$. 它是从一个新曲面 $S’$ 投影到 $C’$ 的(我们这里仍旧用 $x, y$ 表示其局部坐标).  当然, $S’$ 可能不是光滑的甚至不正规, 因此后期还需要打磨它(就是所谓的正规化和奇点解消).  总而言之, 这就是基变换的本质, 就是中学的变量替换. 你日后看到的各种抽象的描述都是这样来的, 无非是语言逼格高大上了而已. </p>
-<p>再回答第二个问题：它有什么用. 这可以从牛顿的研究说起. 牛顿想要解二元多项式方程 $f(x, y)=0$ , 即求出$y=g(x)$ 这样的显函数表达式(我们不妨假设$0=g(0)$ , 仅看原点附近).  他的天才之处在于发现了解的一个普遍结构形式, 即可以写成 $y=h(x^{\frac{1}{q}})$ 这种形式, 这里$q$ 是某个整数, $h$ 是一个幂级数.  比如你要求 $y^3-x^2=0$ 最后发现就是 $y=x^{\frac{2}{3}}$ 这类解. </p>
-<p>如果你设 $x=s^q$ , 那么解就是 $y=h(s)$ ,即关于 $s$ 的幂级数.  现在你会立刻想到, 这个变量替换就是我们的基变换, 是不是？正是如此.  当你把牛顿的发现用现代语言包装, 就变成如下形式(我们先从局部出发考察)：一个曲面($x, y$ 坐标)投影到曲线( $x$ 坐标)构成一个纤维化, 曲面上的一条水平曲线 $D：f(x,y)=0$ . 现在你用基变换 $x=s^q$ , 于是新的纤维化上, $D$ 就变成 $D’ =:f(s^q,y)$ . 根据牛顿的发现, $D’$ 方程可以因式分解成$f(s^q,y)=(y-h_1(s))···(y_n(s))$ .这里 $h_i$ 都是解析函数. 换言之, $D’$ 成为了一组真正的截面！</p>
-<p>然后这个结论拓展到整体语言, 就是一个纤维化 $S$ 投影到基底曲线 $C$ , 假设 $D$ 是某个 $S$ 上的水平曲线, 那么你在某个基变换之后, $D$ 就必然变成一些截面. 对于向量丛, 这个结论也可以类似讨论, 就是你怎么通过基变换, 把向量丛的截面造出来. 这无非是是从一维到高维的推广(前面纤维化是带参数曲线, 后面的向量丛是带参数的向量空间).  </p>
-<p>现在我们继续探讨刚才情形. 前面我们说了水平曲线在基变换后可以变成截面(牛顿的天才发现), 那么对于竖直的曲线又会如何？竖直曲线就是指落在纤维化里的分支曲线.  我们以一般的一条纤维举例, 此时曲线局部方程是 $x=t$ . 基变换取成 $t=s^n$ .  于是基变换后的新方程 $x=s^n$ . 这样看, 似乎这种变换没有什么好处. 别急, 你再看奇异纤维(就是不光滑的竖直曲线)的分支, 它们局部方程 $x^m=t$ (我们避开奇点等等), 那么基变换后的方程 $x^m=t^n$ . 假如你的 $n$ 充分可除的话, 那么这就意味着上面方程又可以分解成 $m$ 个形如 $x-t^{\frac{n}{m}}$ 多项式乘积(为什么用个“又”字, 你懂的).  因此分支的重数 $m$ 在基变换和消失了, 或者说 $m$ 条重合的分支基变换后变成分离的 $m$ 条(我们指的是局部)! </p>
-<p>因此这就引出基变换另一个好处, 就是可以把纤维变得足够简单, 比如上面说的分支没有重数.  曲面纤维化基变换还能把纤维变得更好, 就是所谓的半稳定.  遗憾的是, 高维没有良好的半稳定纤维概念, 基变换的功能也就体现不了(替代地, 用单值语言来描述), 而基变换则更像是为曲面纤维化量身打造的. </p>
-<p>半稳定的纤维在曲线模空间里就类似于处于边缘状态的某些点(称为模点). 基变换的一大优势, 就是能够精确求出这种半稳定纤维结构. 这是华师大纤维化曾经的一个巨大优势(另一个优势是二次覆盖技巧, 以后再讲), 被肖刚、陈志杰和谈胜利发挥到极致.  当然, 这些“祖上曾经阔过”的说法也就是说说, 你们以后做高维或正特征情形纤维化, 相信会自己创造更新的东西的. </p>
-<p>Foliation 因为缺少基底曲线的概念, 所以很难引入基变换概念, 只有少数情形可以尝试. Mcquillan 做过一些尝试, 但估计是失败的. 他的论文晦涩难懂, 也不值得花精力. 但是如果替代性地建造 foliation 的基变换, 是个我个人认为有意思的问题. 谈胜利老师曾指出, 数论上也存在类似的问题. 有兴趣的人以后可以思考一下. </p>
-</section>
-    <!-- Tags START -->
-    
-      <div class="tags">
-        <span>Tags:</span>
-        
-  <a href="/tags#algebraic curve; algebraic geometry" >
-    <span class="tag-code">algebraic curve; algebraic geometry</span>
-  </a>
-
-      </div>
-    
-    <!-- Tags END -->
-    <!-- NAV START -->
-    
-  <div class="nav-container">
-    <!-- reverse left and right to put prev and next in a more logic postition -->
-    
-      <a class="nav-left" href="/make-math-vedio-with-manim/">
-        <span class="nav-arrow">← </span>
-        
-          利用manim制作数学动画
-        
-      </a>
-    
-    
-      <a class="nav-right" href="/heros-in-my-heart/">
-        
-          Heros in my heart
-        
-        <span class="nav-arrow"> →</span>
-      </a>
-    
-  </div>
-
-    <!-- NAV END -->
-    <!-- 打赏 START -->
-    
-      <div class="money-like">
-        <div class="reward-btn">
-          赏
-          <span class="money-code">
-            <span class="alipay-code">
-              <div class="code-image"></div>
-              <b>使用支付宝打赏</b>
-            </span>
-            <span class="wechat-code">
-              <div class="code-image"></div>
-              <b>使用微信打赏</b>
-            </span>
-          </span>
-        </div>
-        <p class="notice">若你觉得我的文章对你有帮助，欢迎点击上方按钮对我打赏</p>
-      </div>
-    
-    <!-- 打赏 END -->
-    <!-- 二维码 START -->
-    
-      <div class="qrcode">
-        <canvas id="share-qrcode"></canvas>
-        <p class="notice">扫描二维码，分享此文章</p>
-      </div>
-    
-    <!-- 二维码 END -->
-    
-      <!-- Gitment START -->
-      <div id="comments"></div>
-      <!-- Gitment END -->
-    
-  </article>
-  <!-- Article END -->
-  <!-- Catalog START -->
-  
-    <aside class="catalog-container">
-  <div class="toc-main">
-    <strong class="toc-title">Catalog</strong>
-    
-      <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#前言"><span class="toc-nav-text">前言</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#First-Week"><span class="toc-nav-text">First Week</span></a></li></ol></li></ol>
-    
-  </div>
-</aside>
-  
-  <!-- Catalog END -->
-</main>
-
-<script>
-  (function () {
-    var url = 'https://github.com/HiMatrixor/HiMatrixor.github.io/question-and-answering-to-Xiao/';
-    var banner = ''
-    if (banner !== '' && banner !== 'undefined' && banner !== 'null') {
-      $('#article-banner').css({
-        'background-image': 'url(' + banner + ')'
-      })
-    } else {
-      $('#article-banner').geopattern(url)
-    }
-    $('.header').removeClass('fixed-header')
-
-    // error image
-    $(".markdown-content img").on('error', function() {
-      $(this).attr('src', 'http://file.muyutech.com/error-img.png')
-      $(this).css({
-        'cursor': 'default'
-      })
-    })
-
-    // zoom image
-    $(".markdown-content img").on('click', function() {
-      var src = $(this).attr('src')
-      if (src !== 'http://file.muyutech.com/error-img.png') {
-        var imageW = $(this).width()
-        var imageH = $(this).height()
-
-        var zoom = ($(window).width() * 0.95 / imageW).toFixed(2)
-        zoom = zoom < 1 ? 1 : zoom
-        zoom = zoom > 2 ? 2 : zoom
-        var transY = (($(window).height() - imageH) / 2).toFixed(2)
-
-        $('body').append('<div class="image-view-wrap"><div class="image-view-inner"><img src="'+ src +'" /></div></div>')
-        $('.image-view-wrap').addClass('wrap-active')
-        $('.image-view-wrap img').css({
-          'width': `${imageW}`,
-          'transform': `translate3d(0, ${transY}px, 0) scale3d(${zoom}, ${zoom}, 1)`
-        })
-        $('html').css('overflow', 'hidden')
-
-        $('.image-view-wrap').on('click', function() {
-          $(this).remove()
-          $('html').attr('style', '')
-        })
-      }
-    })
-  })();
-</script>
-
-
-  <script>
-    var qr = new QRious({
-      element: document.getElementById('share-qrcode'),
-      value: document.location.href
-    });
-  </script>
-
-
-
-  <script>
-    var gitmentConfig = "yanm1ng";
-    if (gitmentConfig !== 'undefined') {
-      var gitment = new Gitment({
-        id: "代数曲面纤维化答疑",
-        owner: "yanm1ng",
-        repo: "yanm1ng.github.io",
-        oauth: {
-          client_id: "0f87e490e00ee3fd87ef",
-          client_secret: "4a9d2b148e7971c2201ad12131ce8bf8159ccd2e"
-        },
-        theme: {
-          render(state, instance) {
-            const container = document.createElement('div')
-            container.lang = "en-US"
-            container.className = 'gitment-container gitment-root-container'
-            container.appendChild(instance.renderHeader(state, instance))
-            container.appendChild(instance.renderEditor(state, instance))
-            container.appendChild(instance.renderComments(state, instance))
-            container.appendChild(instance.renderFooter(state, instance))
-            return container;
-          }
-        }
-      })
-      gitment.render(document.getElementById('comments'))
-    }
-  </script>
-
-
-
-
-    <div class="scroll-top">
-  <span class="arrow-icon"></span>
-</div>
-    <footer class="app-footer">
-  <p class="copyright">
-    &copy; 2020 | Proudly powered by <a href="https://hexo.io" target="_blank">Hexo</a>
-    <br>
-    Theme by <a href="https://github.com/yanm1ng">yanm1ng</a>
-  </p>
-</footer>
-
-<script>
-  function async(u, c) {
-    var d = document, t = 'script',
-      o = d.createElement(t),
-      s = d.getElementsByTagName(t)[0];
-    o.src = u;
-    if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
-    s.parentNode.insertBefore(o, s);
-  }
-</script>
-<script>
-  async("//cdnjs.cloudflare.com/ajax/libs/fastclick/1.0.6/fastclick.min.js", function(){
-    FastClick.attach(document.body);
-  })
-</script>
-
-<script>
-  var hasLine = 'true';
-  async("//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js", function(){
-    $('figure pre').each(function(i, block) {
-      var figure = $(this).parents('figure');
-      if (hasLine === 'false') {
-        figure.find('.gutter').hide();
-      }
-      var lang = figure.attr('class').split(' ')[1] || 'code';
-      var codeHtml = $(this).html();
-      var codeTag = document.createElement('code');
-      codeTag.className = lang;
-      codeTag.innerHTML = codeHtml;
-      $(this).attr('class', '').empty().html(codeTag);
-      figure.attr('data-lang', lang.toUpperCase());
-      hljs.highlightBlock(block);
-    });
-  })
-</script>
-<!-- Baidu Tongji -->
-
-
-<script src="/js/script.js"></script>
-
-  </body>
-</html>
+block content
+  article#post(class="")
+    if (!top_img)
+      #post-title.plain= page.title || _p('no_title')
+      #post-meta
+        if (theme.post_meta.date_type)
+          - var date_type = theme.post_meta.date_type === 'updated' ? '' : 'date'
+          time.post-meta__date #[i.fa.fa-calendar(aria-hidden="true")] #[=date(page[date_type], config.date_format)]
+        if (theme.post_meta.categories && page.categories.data.length > 0)
+          if (theme.post_meta.date_type)
+            span.post-meta__separator |
+          each item, index in page.categories.data
+            i.fa.fa-inbox(aria-hidden="true")
+            a(href=url_for(item.path)).post-meta__categories  #[=item.name]
+            if (index < page.categories.data.length - 1)
+                i.fa.fa-angle-right.post-meta__separator(aria-hidden="true")
+        if (theme.disqus.enable && theme.disqus.count)
+          if (theme.post_meta.date_type || theme.post_meta.categories && page.categories.data.length > 0)
+            span.post-meta__separator |
+          i.fa.fa-comment-o(aria-hidden="true")
+          a(href=url_for(page.path) + '#disqus_thread')
+            span.disqus-comment-count(data-disqus-identifier=page.path)
+        if (theme.wordcount && theme.wordcount.enable)
+          span.post-meta__separator |
+          span.post-meta-wordcount
+            span= _p('post.wordcount') + ': '
+            span.word-count= wordcount(page.content)
+            span.post-meta__separator |
+            span= _p('post.min2read', min2read(page.content, {cn: 350, en: 160}))
+    #post-content.article-container!= page.content
+  if (theme.post_copyright && theme.post_copyright.enable)
+    .post-copyright
+      .post-copyright__author
+        span.post-copyright-meta= _p('post.copyright.author') + ": "
+        span.post-copyright-info
+          a(href=`mailto:${config.email}`) #[=config.author]
+      .post-copyright__type
+        span.post-copyright-meta= _p('post.copyright.link') + ": "
+        span.post-copyright-info
+          a(href=url_for(page.permalink)) #[=page.permalink]
+      .post-copyright__notice
+        span.post-copyright-meta= _p('post.copyright.copyright_notice') + ": "
+        span.post-copyright-info!= _p('post.copyright.copyright_content', theme.post_copyright.license_url, theme.post_copyright.license, config.url, config.title)
+  if (theme.post_meta.tags)
+    .post-meta__tag-list
+      each item, index in page.tags.data
+        a(href=url_for(item.path)).post-meta__tags #[=item.name]
+  if (theme.QR_code)
+    if (theme.QR_code.length > 0)
+      .post-qr-code
+        each item in theme.QR_code
+          .post-qr-code-item
+            img.post-qr-code__img(src=(item.itemlist||item).img)
+            .post-qr-code__desc=(item.itemlist||item).text
+  include includes/share/index.pug
+  include includes/pagination.pug
+  if (theme.adv && theme.adv.enable)
+    .post-adv!= theme.adv.info
+  if page.comments !== false
+    include includes/comments/index.pug
