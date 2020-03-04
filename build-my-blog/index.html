@@ -16,7 +16,7 @@
   <meta name="description" content="献给我的妻子和孩子。">
   <meta name="author" content="Matrixor">
   <meta name="keywords" content="">
-  <title>【经验】利用Hexo+Github搭建个人博客 ~ Matrixor</title>
+  <title>利用Hexo+Github搭建个人博客 ~ Matrixor</title>
 
   <link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/5.12.1/css/all.min.css"  >
 <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/css/bootstrap.min.css"  >
@@ -122,7 +122,7 @@
           <div class="container text-center white-text fadeInUp">
             <span class="h2" id="subtitle">
               
-                【经验】利用Hexo+Github搭建个人博客
+                利用Hexo+Github搭建个人博客
               
             </span>
 
@@ -140,7 +140,7 @@
                   
                   &nbsp;<i class="far fa-chart-bar"></i>
                   <span class="post-count">
-                    968 字
+                    972 字
                   </span>&nbsp;
                 
 
@@ -188,14 +188,14 @@
 <li><a href="https://github.com/wzpan/hexo-renderer-pandoc">hexo-renderer-pandoc</a></li>
 <li><a href="https://github.com/stevenjoezhang/hexo-filter-mathjax">hexo-filter-mathjax</a></li>
 </ul>
-<p>不过，使用这个插件之前，需要安装Pandoc(版本要大于2.0.0)，国内下载很慢，所以我委托了国外的朋友帮我下载了，这里是windows上的<a href="链接：https://pan.baidu.com/s/1z5OUvTwLrUalL9Zxz1MsRQ">Pandoc2.9.1.1百度云</a>,提取码：8ws4 .</p>
+<p>不过，使用这个插件之前，需要安装Pandoc(版本要大于2.0.0)，国内下载很慢，所以我委托了国外的朋友帮我下载了，这里是windows上的<a href="链接：https://pan.baidu.com/s/1z5OUvTwLrUalL9Zxz1MsRQ">Pandoc2.9.1.1百度云</a> <code>提取码：8ws4</code> .</p>
 <p>安装好之后，就安装上面两个插件就可以了。</p>
 <h2 id="写文章和发布文章"><a href="#写文章和发布文章" class="headerlink" title="写文章和发布文章"></a>写文章和发布文章</h2><p>首先在博客根目录下右键打开<code>git bash</code>，安装一个扩展<code>npm i hexo-deployer-git</code>。</p>
 <p>然后输入<code>hexo new post &quot;article title&quot;</code>，新建一篇文章。</p>
 <p>然后打开<code>D:\Study\MyBlog\source\_posts</code>的目录，可以发现下面多了一个文件夹和一个<code>.md</code>文件，一个用来存放你的图片等数据，另一个就是你的文章文件啦。<br>你可以会直接在<code>vscode</code>里面编写<code>markdown</code>文件，可以实时预览，也可以用用其他编辑<code>md</code>文件的软件的工具编写。<br>编写完markdown文件后，根目录下输入<code>hexo g</code>生成静态网页，然后输入<code>hexo s</code>可以本地预览效果，最后输入<code>hexo d</code>上传到<code>github</code>上。这时打开你的<code>github.io</code>主页就能看到发布的文章啦。</p>
-<h2 id="公式示例"><a href="#公式示例" class="headerlink" title="公式示例"></a>公式示例</h2><p>代码1：<br><code>\hbar\frac{\partial}{\partial t}\psi=-\frac{\hbar^2}{2m}\nabla^2\psi+V\psi</code></p>
+<h2 id="公式示例"><a href="#公式示例" class="headerlink" title="公式示例"></a>公式示例</h2><p>公式代码1：<br><code>\hbar\frac{\partial}{\partial t}\psi=-\frac{\hbar^2}{2m}\nabla^2\psi+V\psi</code></p>
 <p>$$<br>i\hbar\frac{\partial}{\partial t}\psi=-\frac{\hbar^2}{2m}\nabla^2\psi+V\psi<br>$$</p>
-<p>代码2：</p>
+<p>公式代码2：</p>
 <pre><code>\begin{eqnarray\*}
 \nabla\cdot\vec{E}&amp;=&amp;\frac{\rho}{\epsilon_0}\\\\
 \nabla\cdot\vec{B}&amp;=&amp;0\\\\
@@ -206,7 +206,9 @@
 <h3 id="如何在评论系统支持数学公式"><a href="#如何在评论系统支持数学公式" class="headerlink" title="如何在评论系统支持数学公式"></a>如何在评论系统支持数学公式</h3><p>可参考<a href="http://blog.sciencenet.cn/home.php?mod=space&amp;uid=2398747&amp;do=blog&amp;id=881516" target="_blank" rel="noopener">http://blog.sciencenet.cn/home.php?mod=space&amp;uid=2398747&amp;do=blog&amp;id=881516</a></p>
 <p>评论区没有正文的符号支持功能，直接把正文中的数学公式拷贝到评论区一般也是行不通的，但是大家可以考虑使用Unicode的数学符号。Wikipedia上的<a href="http://en.wikipedia.org/wiki/Mathematical_operators_and_symbols_in_Unicode" target="_blank" rel="noopener">英文版的数学符号</a>就是一个大全。高手更是可以不需拷贝直接输入Unicode。需要注意的是，不同的浏览器的默认字体对于Unicode的支持程度是不一样的。比如说我用Firefox的默认设置能基本显示所有的数学符号，但是Chrome的默认设置就只支持比较常见的那些。如果要方便读者不用变更默认字体就能看的话，还是要避免不常见的符号。</p>
 <p>当然正文的数学公式都是读者的浏览器使用Javascript（MathJax库程序）直接生成的（在慢一点的平板电脑或手机上这个会很明显），同样的功能扩展到评论区只是举手之劳。站主能否做就看大家的需求与呼声大小了。</p>
-<p><strong>注：</strong>本博客采用的是<a href="https://github.com/fluid-dev/hexo-theme-fluid">Fluid</a>主题。<br>有帮助的链接：<br><a href="https://zhuanlan.zhihu.com/p/33616481" target="_blank" rel="noopener">Hexo搭建的GitHub博客之优化大全</a><br><a href="https://blog.dlzhang.com/posts/89dad1c1/" target="_blank" rel="noopener">Hexo NexT 博客增加知乎豆瓣图标支持</a></p>
+<p><strong>注：</strong></p>
+<p>本博客采用的是<a href="https://github.com/fluid-dev/hexo-theme-fluid">Fluid</a>主题。</p>
+<p>有帮助的链接：<br><a href="https://zhuanlan.zhihu.com/p/33616481" target="_blank" rel="noopener">Hexo搭建的GitHub博客之优化大全</a><br><a href="https://blog.dlzhang.com/posts/89dad1c1/" target="_blank" rel="noopener">Hexo NexT 博客增加知乎豆瓣图标支持</a></p>
 
             <hr>
           </div>
