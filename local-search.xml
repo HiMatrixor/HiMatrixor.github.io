@@ -4,6 +4,25 @@
   
   
   <entry>
+    <title>有哪些好的微分流形教材</title>
+    <link href="/diferendtial-manifold-books/"/>
+    <url>/diferendtial-manifold-books/</url>
+    
+    <content type="html"><![CDATA[<p>刚开始学微分流形的时候用的是陈维桓的书《微分流形初步》，细节和公式非常繁琐，很容易迷失在符号堆里，加上老师讲得不好，所以起初对微分流形比较排斥。等后来学习代数几何的时候发现自己没有建立起比较好的几何直观，后来看到了 John Lee的书感觉写得很详细，能帮助初学者很好的理解微分流形，所以这里推荐 John Lee 的几本书。</p><p>John Lee 写了三本书，GTM 202 拓扑流形，GTM218 光滑流形导论，GTM176 黎曼流形。他写书的特点就是特别特别细、啰嗦。GTM218 有600多页，定义清晰，可贵的是提供的巨量的 motivation 和 examples，很好地展现了geometric intuition， 还有巨量习题，方便自学。举例：分别处理了浸入子流形和嵌入子流形；对切空间的各种定义都有涉及，选取的定义在几何直觉和抽象之间平衡得很好。但是正是因为它太厚了，精读实在费劲。第一次读容易丢了主线，需要搭配一份比较薄的 notes 一起念，notes 抓主线 John Lee 补细节。这里安利一波 <a href="https://www.math.ucla.edu/~honda/" target="_blank" rel="noopener">UCLA Honda Ko</a> 写的notes~100页出头，他本人主页可以免费下载或者点下面的链接。</p><p><a href="https://pan.baidu.com/s/14_XaQKEz9fAtpebHfjTrKQ" target="_blank" rel="noopener">Differential Geometry Notes by Ko Honda</a> 提取码：bx0v</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>推荐</category>
+      
+    </categories>
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>利用Hexo+Github搭建个人博客</title>
     <link href="/build-my-blog/"/>
     <url>/build-my-blog/</url>
@@ -23,25 +42,6 @@
       <tag>Hexo</tag>
       
     </tags>
-    
-  </entry>
-  
-  
-  
-  <entry>
-    <title>有哪些好的微分流形教材</title>
-    <link href="/diferendtial-manifold-books/"/>
-    <url>/diferendtial-manifold-books/</url>
-    
-    <content type="html"><![CDATA[<p>刚开始学微分流形的时候用的是陈维桓的书《微分流形初步》，细节和公式非常繁琐，很容易迷失在符号堆里，加上老师讲得不好，所以起初对微分流形比较排斥。等后来学习代数几何的时候发现自己没有建立起比较好的几何直观，后来看到了 John Lee的书感觉写得很详细，能帮助初学者很好的理解微分流形，所以这里推荐 John Lee 的几本书。</p><p>John Lee 写了三本书，GTM 202 拓扑流形，GTM218 光滑流形导论，GTM176 黎曼流形。他写书的特点就是特别特别细、啰嗦。GTM218 有600多页，定义清晰，可贵的是提供的巨量的 motivation 和 examples，很好地展现了geometric intuition， 还有巨量习题，方便自学。举例：分别处理了浸入子流形和嵌入子流形；对切空间的各种定义都有涉及，选取的定义在几何直觉和抽象之间平衡得很好。但是正是因为它太厚了，精读实在费劲。第一次读容易丢了主线，需要搭配一份比较薄的 notes 一起念，notes 抓主线 John Lee 补细节。这里安利一波 <a href="https://www.math.ucla.edu/~honda/" target="_blank" rel="noopener">UCLA Honda Ko</a> 写的notes~100页出头，他本人主页可以免费下载或者点下面的链接。</p><p><a href="https://pan.baidu.com/s/14_XaQKEz9fAtpebHfjTrKQ" target="_blank" rel="noopener">Differential Geometry Notes by Ko Honda</a> 提取码：bx0v</p>]]></content>
-    
-    
-    <categories>
-      
-      <category>推荐</category>
-      
-    </categories>
-    
     
   </entry>
   
