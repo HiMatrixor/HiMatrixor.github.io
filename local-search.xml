@@ -4,6 +4,31 @@
   
   
   <entry>
+    <title>mma动图训练</title>
+    <link href="/simple-fourier-motion-graph/"/>
+    <url>/simple-fourier-motion-graph/</url>
+    
+    <content type="html"><![CDATA[<p>mathematica小测试<a id="more"></a></p><p>一个傅里叶变换动图：</p><pre><code class="mathematica">FourierF[a_, t_] := a.Table[Sin[2 Pi i t], {i, Length[a]}];FourierAnim[a_, t_] := Module[{A=Accumulate[a*Table[Cos[2 Pi i t],i,Length[a]}]],B=Accumulate[a*Table[Sin[2 Pi i t],{i,Length[a]}]]},rependTo[A,0];PrependTo[B, 0];Show[Graphics[     Table[{Circle[{A[[i]],B[[i]]},a[[i]]],Darker[Red],       If[i != Length@a,Line[{{A[[i]], B[[i]]}, {A[[i + 1]], B[[i + 1]]}}], {Red,Dashed, Line[{{A[[i]],B[[i]]},{2,B[[i]]}}]}]},{i,Length@a}],PlotRange -&gt; {{-1.5, 3}, {-1, 1}}],Plot[FourierF[a[[;; -2]], t - \[Tau]], {\[Tau], 2, 3}]]];a = Table[(1 - (-1)^i)/i, {i, 16}]/Pi;Manipulate[FourierAnim[a[[;; j]], t], {t, 0, 1}, {j, 1, Length@a, 1}]</code></pre><img src="https://s1.ax1x.com/2020/03/29/GVRg5q.gif" srcset="/img/loading.gif" alt="GVRg5q.gif" border="0" />]]></content>
+    
+    
+    <categories>
+      
+      <category>mathematica</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>test</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>有哪些好的微分流形教材</title>
     <link href="/diferendtial-manifold-books/"/>
     <url>/diferendtial-manifold-books/</url>
