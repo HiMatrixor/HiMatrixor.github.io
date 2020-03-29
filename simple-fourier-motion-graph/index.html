@@ -140,7 +140,7 @@
                   
                   &nbsp;<i class="far fa-chart-bar"></i>
                   <span class="post-count">
-                    138 字
+                    154 字
                   </span>&nbsp;
                 
 
@@ -181,20 +181,23 @@
       <div class="py-5 z-depth-3" id="board">
         <div class="post-content mx-auto" id="post">
           <div class="markdown-body">
-            <p>mathematica小测试<a id="more"></a></p>
+            <p>Mathematica小测试<a id="more"></a></p>
 <p>一个傅里叶变换动图：</p>
 <pre><code class="mathematica">FourierF[a_, t_] := a.Table[Sin[2 Pi i t], {i, Length[a]}];
-
-FourierAnim[a_, t_] := Module[{A=Accumulate[a*Table[Cos[2 Pi i t],i,Length[a]}]],B=Accumulate[a*Table[Sin[2 Pi i t],{i,Length[a]}]]},rependTo[A,0];PrependTo[B, 0];
-
+FourierAnim[a_, t_] := Module[{A=Accumulate[a*Table[Cos[2 Pi i t],i,Length[a]}]],
+B=Accumulate[a*Table[Sin[2 Pi i t],{i,Length[a]}]]},rependTo[A,0];PrependTo[B, 0];
 Show[Graphics[
      Table[{Circle[{A[[i]],B[[i]]},a[[i]]],Darker[Red],
-       If[i != Length@a,Line[{{A[[i]], B[[i]]}, {A[[i + 1]], B[[i + 1]]}}], {Red,Dashed, Line[{{A[[i]],B[[i]]},{2,B[[i]]}}]}]},{i,Length@a}],PlotRange -&gt; {{-1.5, 3}, {-1, 1}}],Plot[FourierF[a[[;; -2]], t - \[Tau]], {\[Tau], 2, 3}]]];
+       If[i != Length@a,Line[{{A[[i]], B[[i]]}, {A[[i + 1]], B[[i + 1]]}}], 
+       {Red,Dashed, Line[{{A[[i]],B[[i]]},{2,B[[i]]}}]}]},{i,Length@a}],
+       PlotRange -&gt; {{-1.5, 3}, {-1, 1}}],
+       Plot[FourierF[a[[;; -2]], t - \[Tau]], {\[Tau], 2, 3}]]];
 
 a = Table[(1 - (-1)^i)/i, {i, 16}]/Pi;
 
 Manipulate[FourierAnim[a[[;; j]], t], {t, 0, 1}, {j, 1, Length@a, 1}]</code></pre>
-<img src="https://s1.ax1x.com/2020/03/29/GVRg5q.gif" srcset="/img/loading.gif" alt="GVRg5q.gif" border="0" />
+<p>下面是代码截图：<br><img src="https://s1.ax1x.com/2020/03/29/GVIdGn.png" srcset="/img/loading.gif" alt="GVIdGn.png" border="0" /><br>最终实现的效果如下：<br><img src="https://s1.ax1x.com/2020/03/29/GVRg5q.gif" srcset="/img/loading.gif" alt="GVRg5q.gif" border="0" /></p>
+
             <hr>
           </div>
           <br>
@@ -204,7 +207,7 @@ Manipulate[FourierAnim[a[[;; j]], t], {t, 0, 1}, {j, 1, Length@a, 1}]</code></pr
               <span>
                 <i class="iconfont icon-inbox"></i>
                 
-                  <a class="hover-with-bg" href="/categories/mathematica/">mathematica</a>
+                  <a class="hover-with-bg" href="/categories/Mathematica/">Mathematica</a>
                   &nbsp;
                 
               </span>&nbsp;&nbsp;
