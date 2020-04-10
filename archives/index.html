@@ -27,7 +27,7 @@
 
 
 
-  <link rel="stylesheet" href="/lib/prettify/tomorrow-night-eighties.min.css"  >
+  <link rel="stylesheet" href="/lib/prettify/tomorrow.min.css"  >
 
 <link rel="stylesheet" href="/css/main.css"  >
 
@@ -188,25 +188,19 @@
       <span style="float: right;">03-04</span>
     </a>
   
-    
-    <a href="/heros-in-my-heart/" class="list-group-item list-group-item-action">
-      <span class="archive-post-title">Heroes in my heart</span>
-      <span style="float: right;">03-02</span>
-    </a>
-  
-    
-    <a href="/make-math-vedio-with-manim/" class="list-group-item list-group-item-action">
-      <span class="archive-post-title">利用manim制作数学动画</span>
-      <span style="float: right;">02-21</span>
-    </a>
-  
-    
-    <a href="/some-tools-to-use-latex-better/" class="list-group-item list-group-item-action">
-      <span class="archive-post-title">更好地使用LaTex</span>
-      <span style="float: right;">02-20</span>
-    </a>
-  
 </div>
+
+  <nav aria-label="index posts navigation">
+    <span class="pagination pg-blue justify-content-center mt-5" id="pagination">
+      <span class="page-number current">1</span><a class="page-number" href="/archives/page/2/">2</a><a class="extend next" rel="next" href="/archives/page/2/"><i class="fas fa-angle-double-right"></i></a>
+    </span>
+  </nav>
+  
+  <script>
+    for (ele of document.getElementById("pagination").getElementsByClassName("page-number")) {
+      ele.href += '#board';
+    }
+  </script>
 
 
               </div>
@@ -255,20 +249,6 @@
     <br>
 
     
-  
-    <!-- 不蒜子统计PV -->
-    
-    &nbsp;<span id="busuanzi_container_site_pv"></span>总访问量 
-          <span id="busuanzi_value_site_pv"></span> 次&nbsp;
-  
-  
-    <!-- 不蒜子统计UV -->
-    
-    &nbsp;<span id="busuanzi_container_site_uv"></span>总访客数 
-            <span id="busuanzi_value_site_uv"></span> 人&nbsp;
-  
-  <br>
-
 
 
     
@@ -295,8 +275,6 @@
 
 
 
-
-  <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
 
 
 <!-- Plugins -->
