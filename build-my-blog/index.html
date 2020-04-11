@@ -272,6 +272,30 @@
 </div>
 
 
+
+<div class="card">
+    <div class="card-content">
+        <h3 class="title is-5 has-text-weight-normal">评论</h3>
+        
+<div id="comment-container"></div>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1.4.1/dist/gitalk.css">
+<script src="https://cdn.jsdelivr.net/npm/gitalk@1.4.1/dist/gitalk.min.js"></script>
+<script>
+    var gitalk = new Gitalk({
+        clientID: '4334a94df9e42ebe49c0',
+        clientSecret: '9bbafab5e91971c0d72ef8bd1a6492d90343384c',
+        id: 'ec2387ff61155a48dcd2eac708941d3a',
+        repo: 'HiMatrixor.github.io',
+        owner: 'HiMatrixor',
+        admin: ["HiMatrixor"],
+        createIssueManually: false,
+        distractionFreeMode: false
+    })
+    gitalk.render('comment-container')
+</script>
+
+    </div>
+</div>
 </div>
                 
 
